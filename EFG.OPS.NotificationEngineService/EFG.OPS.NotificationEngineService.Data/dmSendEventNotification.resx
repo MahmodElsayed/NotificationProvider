@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="cmdGetEventSubscribersSelect.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="cmdGetEventSubscribersSelect.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="cmdGetEventSubscribersSelect.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="cmdGetEventSubscribersSelect.CommandText" xml:space="preserve">
+    <value>SELECT        EventMessages.EventMessageID AS EventID, EventMessages._EventTypeID AS EventTypeID, _EventTypes.Descrp_AR AS EventDescA, _EventTypes.Descrp_EN AS EventDescE, _EventTypes.EventTempTable, 
+                         _EventTypes.IsMarketEvent, _EventTypes.IsCompanyEvent, _EventTypes.CompanyColumn, _EventTypes.MarketColumn, EventMessages.MessageBody AS EventMessageBody, EventMessages.CreationDate, 
+                         EventMessages.MarketID AS EventMarketID, EventMessages.CompanyCode AS EventCompanyCode, EventSubscribers.EventSubscriberID, EventSubscribers.EventReciverID, 
+                         EventSubscribers._EventReciverTypeID AS EventReciverTypeID, EventSubscribers.MarketID, EventSubscribers.CompanyCode, EventSubscribers.HubID, 
+                         EventSubscriberNotificationTypes._EventNotificationTypeID, _EventReciverTypes.EventReciverTable, _EventReciverTypes.EventReciverTableIdentityColumn, 
+                         _EventReciverTypes.EventReciverTableEmailColumn, _EventReciverTypes.EventReciverTableMobileColumn, _EventReciverTypes.EventReciverTableFaxColumn, 
+                         _EventReciverTypes.EventReciverTablePreferredNotificationTypeColumn, _EventReciverTypes.EventReciverTableUniqueValueColumn, _EventReciverTypes._EventReciverTypeID, EventMessages.ExpiryDate, 
+                         _EventReciverTypes.EventReciverIFAColumn
+FROM            EventMessages INNER JOIN
+                         _EventTypes ON EventMessages._EventTypeID = _EventTypes._EventTypeID INNER JOIN
+                         EventSubscribers ON EventMessages._EventTypeID = EventSubscribers._EventTypeID AND (ISNULL(_EventTypes.IsMarketEvent, 0) = 0 OR
+                         EventMessages.MarketID = EventSubscribers.MarketID) AND (ISNULL(_EventTypes.IsCompanyEvent, 0) = 0 OR
+                         EventMessages.CompanyCode = EventSubscribers.CompanyCode) INNER JOIN
+                         _EventReciverTypes ON EventSubscribers._EventReciverTypeID = _EventReciverTypes._EventReciverTypeID INNER JOIN
+                         EventSubscriberNotificationTypes ON EventSubscribers.EventSubscriberID = EventSubscriberNotificationTypes.EventSubscriberID
+WHERE        (EventMessages.EventMessageID = @EventID)</value>
+  </data>
+  <metadata name="Con.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 95</value>
+  </metadata>
+  <metadata name="daGetEventSubscribers.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <metadata name="cmdGetEventSubscriberContactsSelect.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="cmdGetEventSubscriberContactsSelect.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="cmdGetEventSubscriberContactsSelect.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="daGetEventSubscriberContacts.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 134</value>
+  </metadata>
+  <metadata name="cmdGetEventkeyValueSelect.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="cmdGetEventkeyValueSelect.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="cmdGetEventkeyValueSelect.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="daGetEventkeyValue.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 173</value>
+  </metadata>
+  <metadata name="cmdGetEventNotificationMessagesSelect.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="cmdGetEventNotificationMessagesSelect.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="cmdGetEventNotificationMessagesSelect.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="cmdGetEventNotificationMessagesSelect.CommandText" xml:space="preserve">
+    <value>SELECT        dbo._EventNotificationMessage._EventNotificationMessageID, dbo._EventNotificationMessage._EventTypeID, dbo._EventNotificationMessage._EventNotificationTypeID, 
+                         dbo._EventNotificationMessage.EventNotificationMessageBody, dbo._EventNotificationMessage.EventNotificationMessageTitle, dbo._EventNotificationMessage.MarketID, 
+                         dbo._EventNotificationMessage.CompanyCode, dbo._EventNotificationMessage.EventNotificationMessageSender, dbo._EventNotificationMessage._EventReciverTypeID
+FROM            dbo._EventNotificationMessage INNER JOIN
+                         dbo.EventMessages ON dbo._EventNotificationMessage._EventTypeID = dbo.EventMessages._EventTypeID
+WHERE        (dbo.EventMessages.EventMessageID = @EventID) AND (dbo.EventMessages.MarketID IS NULL) AND (dbo.EventMessages.CompanyCode IS NULL) OR
+                         (dbo.EventMessages.EventMessageID = @EventID) AND (dbo.EventMessages.CompanyCode IS NULL) AND (dbo._EventNotificationMessage.MarketID IS NULL) OR
+                         (dbo.EventMessages.EventMessageID = @EventID) AND (dbo.EventMessages.MarketID = dbo._EventNotificationMessage.MarketID) AND (dbo.EventMessages.CompanyCode IS NULL) OR
+                         (dbo.EventMessages.EventMessageID = @EventID) AND (dbo.EventMessages.MarketID IS NULL) AND (dbo._EventNotificationMessage.CompanyCode IS NULL) OR
+                         (dbo.EventMessages.EventMessageID = @EventID) AND (dbo._EventNotificationMessage.MarketID IS NULL) AND (dbo._EventNotificationMessage.CompanyCode IS NULL) OR
+                         (dbo.EventMessages.EventMessageID = @EventID) AND (dbo.EventMessages.MarketID = dbo._EventNotificationMessage.MarketID) AND (dbo._EventNotificationMessage.CompanyCode IS NULL) OR
+                         (dbo.EventMessages.EventMessageID = @EventID) AND (dbo.EventMessages.MarketID IS NULL) AND (dbo.EventMessages.CompanyCode = dbo._EventNotificationMessage.CompanyCode) OR
+                         (dbo.EventMessages.EventMessageID = @EventID) AND (dbo.EventMessages.CompanyCode = dbo._EventNotificationMessage.CompanyCode) AND (dbo._EventNotificationMessage.MarketID IS NULL) OR
+                         (dbo.EventMessages.EventMessageID = @EventID) AND (dbo.EventMessages.MarketID = dbo._EventNotificationMessage.MarketID) AND 
+                         (dbo.EventMessages.CompanyCode = dbo._EventNotificationMessage.CompanyCode)</value>
+  </data>
+  <metadata name="daGetEventNotificationMessages.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 212</value>
+  </metadata>
+  <metadata name="cmdGetEventMessageParentSelect.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="cmdGetEventMessageParentSelect.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="cmdGetEventMessageParentSelect.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="cmdGetEventMessageParentSelect.CommandText" xml:space="preserve">
+    <value>SELECT        EventMessageID, _EventTypeID, CreationDate, MessageBody, MarketID, CompanyCode, ExpiryDate
+FROM            EventMessages
+WHERE        (EventMessageID IN
+                             (SELECT        ParentEventMessageID
+                                FROM            EventMessages AS EventMessages_1
+                                WHERE        (EventMessageID = @EventMessageID)))</value>
+  </data>
+  <metadata name="daGetEventMessageParent.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 251</value>
+  </metadata>
+  <metadata name="cmdEventIFANotificationsSelect.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="cmdEventIFANotificationsSelect.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="cmdEventIFANotificationsSelect.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="cmdEventIFANotificationsSelect.CommandText" xml:space="preserve">
+    <value>SELECT        EventIFANotificationID, EventMessageID, EventIFANotificationBody, EventIFANotificationTitle, EventIFASubscriberID, EventIFASubscriberNotificationAddress, _EventMessagesStatusID
+FROM            EventIFANotifications
+WHERE        (EventIFANotificationID = @EventIFANotificationID)</value>
+  </data>
+  <metadata name="cmdEventIFANotificationsInsert.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="cmdEventIFANotificationsInsert.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="cmdEventIFANotificationsInsert.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="cmdEventIFANotificationsInsert.CommandText" xml:space="preserve">
+    <value>INSERT INTO EventIFANotifications
+                         (EventMessageID, EventIFANotificationBody, EventIFANotificationTitle, EventIFASubscriberID, EventIFASubscriberNotificationAddress, _EventMessagesStatusID)
+VALUES        (@EventMessageID,@EventIFANotificationBody,@EventIFANotificationTitle,@EventIFASubscriberID,@EventIFASubscriberNotificationAddress,@_EventMessagesStatusID);  
+SELECT EventIFANotificationID, EventMessageID, EventIFANotificationBody, EventIFASubscriberID FROM EventIFANotifications WHERE (EventIFANotificationID = SCOPE_IDENTITY())</value>
+  </data>
+  <metadata name="cmdEventIFANotificationsUpdate.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="cmdEventIFANotificationsUpdate.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="cmdEventIFANotificationsUpdate.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="cmdEventIFANotificationsUpdate.CommandText" xml:space="preserve">
+    <value>UPDATE       EventIFANotifications
+SET                EventMessageID = @EventMessageID, EventIFANotificationBody = @EventIFANotificationBody, EventIFANotificationTitle = EventIFANotificationTitle, EventIFASubscriberID = @EventIFASubscriberID, 
+                         EventIFASubscriberNotificationAddress = @EventIFASubscriberNotificationAddress, _EventMessagesStatusID = @_EventMessagesStatusID
+WHERE        (EventIFANotificationID = @Original_EventIFANotificationID);   
+SELECT EventIFANotificationID, EventMessageID, EventIFANotificationBody, EventIFASubscriberID FROM EventIFANotifications WHERE (EventIFANotificationID = @EventIFANotificationID)</value>
+  </data>
+  <metadata name="cmdEventIFANotificationsDelete.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="cmdEventIFANotificationsDelete.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="cmdEventIFANotificationsDelete.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="cmdEventIFANotificationsDelete.CommandText" xml:space="preserve">
+    <value>DELETE FROM [EventIFANotifications] WHERE (([EventIFANotificationID] = @Original_EventIFANotificationID) AND ([EventMessageID] = @Original_EventMessageID) AND ([EventIFASubscriberID] = @Original_EventIFASubscriberID))</value>
+  </data>
+  <metadata name="daEventIFANotifications.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 290</value>
+  </metadata>
+  <metadata name="cmdEventMessagesStatusSetpsSelect.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="cmdEventMessagesStatusSetpsSelect.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="cmdEventMessagesStatusSetpsSelect.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="cmdEventMessagesStatusSetpsSelect.CommandText" xml:space="preserve">
+    <value>SELECT        _EventMessagesStatusSetpID, _EventTypeID, _EventMessagesStatusID, _EventMessagesStatusStrategyID, CollateralEventType, CollateralEventBody, IsChangeable
+FROM            _EventMessagesStatusSetps
+WHERE        (_EventTypeID = @_EventTypeID)</value>
+  </data>
+  <metadata name="daEventMessagesStatusSetps.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 329</value>
+  </metadata>
+  <metadata name="cmdEventMessageSelect.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="cmdEventMessageSelect.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="cmdEventMessageSelect.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="cmdEventMessageSelect.CommandText" xml:space="preserve">
+    <value>SELECT        EventMessageID, _EventTypeID, CreationDate, MessageBody, MarketID, CompanyCode, ExpiryDate, _EventMessagesStatusID
+FROM            EventMessages
+WHERE        (EventMessageID = @EventMessageID)</value>
+  </data>
+  <metadata name="cmdcmdEventMessageInsert.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="cmdcmdEventMessageInsert.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="cmdcmdEventMessageInsert.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="cmdcmdEventMessageInsert.CommandText" xml:space="preserve">
+    <value>INSERT INTO [EventMessages] ([_EventTypeID], [CreationDate], [MessageBody], [MarketID], [CompanyCode], [ExpiryDate], [_EventMessagesStatusID]) VALUES (@_EventTypeID, @CreationDate, @MessageBody, @MarketID, @CompanyCode, @ExpiryDate, @_EventMessagesStatusID);
+SELECT EventMessageID, _EventTypeID, CreationDate, MessageBody, MarketID, CompanyCode, ExpiryDate, _EventMessagesStatusID FROM EventMessages WHERE (EventMessageID = SCOPE_IDENTITY())</value>
+  </data>
+  <metadata name="cmdcmdEventMessageUpdate.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="cmdcmdEventMessageUpdate.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="cmdcmdEventMessageUpdate.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="cmdcmdEventMessageUpdate.CommandText" xml:space="preserve">
+    <value>UPDATE       EventMessages
+SET                _EventTypeID = @_EventTypeID, CreationDate = @CreationDate, MessageBody = @MessageBody, MarketID = @MarketID, CompanyCode = @CompanyCode, ExpiryDate = @ExpiryDate, 
+                         _EventMessagesStatusID = @_EventMessagesStatusID
+WHERE        (EventMessageID = @Original_EventMessageID); 
+SELECT EventMessageID, _EventTypeID, CreationDate, MessageBody, MarketID, CompanyCode, ExpiryDate, _EventMessagesStatusID FROM EventMessages WHERE (EventMessageID = @EventMessageID)</value>
+  </data>
+  <metadata name="cmdEventMessageDelete.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="cmdEventMessageDelete.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="cmdEventMessageDelete.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="cmdEventMessageDelete.CommandText" xml:space="preserve">
+    <value>DELETE FROM [EventMessages] WHERE (([EventMessageID] = @Original_EventMessageID) AND ([_EventTypeID] = @Original__EventTypeID) AND ((@IsNull_CreationDate = 1 AND [CreationDate] IS NULL) OR ([CreationDate] = @Original_CreationDate)) AND ((@IsNull_MarketID = 1 AND [MarketID] IS NULL) OR ([MarketID] = @Original_MarketID)) AND ((@IsNull_CompanyCode = 1 AND [CompanyCode] IS NULL) OR ([CompanyCode] = @Original_CompanyCode)) AND ((@IsNull_ExpiryDate = 1 AND [ExpiryDate] IS NULL) OR ([ExpiryDate] = @Original_ExpiryDate)) AND ((@IsNull__EventMessagesStatusID = 1 AND [_EventMessagesStatusID] IS NULL) OR ([_EventMessagesStatusID] = @Original__EventMessagesStatusID)))</value>
+  </data>
+  <metadata name="daGetEventMessage.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 368</value>
+  </metadata>
+  <metadata name="cmdMSMQEventTypesSelect.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="cmdMSMQEventTypesSelect.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="cmdMSMQEventTypesSelect.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="daMSMQEventTypes.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 407</value>
+  </metadata>
+  <metadata name="cmdEventMessageIFANotificationsSelect.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="cmdEventMessageIFANotificationsSelect.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="cmdEventMessageIFANotificationsSelect.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="cmdEventMessageIFANotificationsSelect.CommandText" xml:space="preserve">
+    <value>SELECT        EventIFANotificationID, EventMessageID, EventIFANotificationBody, EventIFANotificationTitle, EventIFASubscriberID, EventIFASubscriberNotificationAddress, _EventMessagesStatusID
+FROM            EventIFANotifications
+WHERE        (EventMessageID = @EventMessageID)</value>
+  </data>
+  <metadata name="daEventMessageIFANotifications.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 446</value>
+  </metadata>
+  <metadata name="daEventMessageIFAActionNotifications.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 485</value>
+  </metadata>
+  <metadata name="cmdEventMessageIFAActionNotificationsSelect.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="cmdEventMessageIFAActionNotificationsSelect.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="cmdEventMessageIFAActionNotificationsSelect.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="cmdEventMessageIFAActionNotificationsSelect.CommandText" xml:space="preserve">
+    <value>SELECT        EventIFANotifications.EventIFANotificationID, EventIFANotifications.EventMessageID, EventIFANotifications.EventIFANotificationBody, EventIFANotifications.EventIFANotificationTitle, 
+                         EventIFANotifications.EventIFASubscriberID, EventIFANotifications.EventIFASubscriberNotificationAddress, EventIFANotifications._EventMessagesStatusID
+FROM            EventIFANotifications INNER JOIN
+                         EventMessagesStatusActionSubscribers ON EventIFANotifications.EventIFASubscriberID = EventMessagesStatusActionSubscribers.EventSubscriberID
+WHERE        (EventIFANotifications.EventMessageID = @EventMessageID) AND (EventMessagesStatusActionSubscribers._EventMessagesStatusSetpID = @_EventMessagesStatusSetpID)</value>
+  </data>
+  <metadata name="cmdGetUserIFANotificationsSelect.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="cmdGetUserIFANotificationsSelect.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="cmdGetUserIFANotificationsSelect.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="cmdGetUserIFANotificationsSelect.CommandText" xml:space="preserve">
+    <value>SELECT        EventIFANotifications.EventIFANotificationID, EventIFANotifications.EventMessageID, EventIFANotifications.EventIFANotificationBody, EventIFANotifications.EventIFANotificationTitle, 
+                         EventIFANotifications.EventIFASubscriberID, EventIFANotifications.EventIFASubscriberNotificationAddress, EventIFANotifications._EventMessagesStatusID, EventMessages.ParentEventMessageID, 
+                         EventMessages.FirstParentEventmessageID, EventMessages.ExpiryDate, EventMessages._EventMessagesStatusID AS EventMessageStatus
+FROM            EventIFANotifications INNER JOIN
+                         EventMessages ON EventIFANotifications.EventMessageID = EventMessages.EventMessageID
+WHERE        (EventIFANotifications.EventIFASubscriberNotificationAddress = @EventIFASubscriberNotificationAddress) AND (EventMessages.ExpiryDate &gt;= GETDATE() OR
+                         EventMessages.ExpiryDate IS NULL)</value>
+  </data>
+  <metadata name="daGetUserIFANotifications.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 524</value>
+  </metadata>
+  <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+</root>

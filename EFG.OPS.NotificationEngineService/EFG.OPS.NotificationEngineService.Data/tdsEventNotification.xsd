@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="tdsEventNotification" targetNamespace="http://tempuri.org/tdsEventNotification.xsd" xmlns:mstns="http://tempuri.org/tdsEventNotification.xsd" xmlns="http://tempuri.org/tdsEventNotification.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=efg-dbstg07;Initial Catalog=QA-EGY3;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="efg-dbstg07.QA-EGY3.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="tdsEventNotification" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="tdsEventNotification" msprop:Generator_UserDSName="tdsEventNotification">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="EventSubscriberContacts" msprop:Generator_TableClassName="EventSubscriberContactsDataTable" msprop:Generator_TableVarName="tableEventSubscriberContacts" msprop:Generator_RowChangedName="EventSubscriberContactsRowChanged" msprop:Generator_TablePropName="EventSubscriberContacts" msprop:Generator_RowDeletingName="EventSubscriberContactsRowDeleting" msprop:Generator_RowChangingName="EventSubscriberContactsRowChanging" msprop:Generator_RowEvHandlerName="EventSubscriberContactsRowChangeEventHandler" msprop:Generator_RowDeletedName="EventSubscriberContactsRowDeleted" msprop:Generator_RowClassName="EventSubscriberContactsRow" msprop:Generator_UserTableName="EventSubscriberContacts" msprop:Generator_RowEvArgName="EventSubscriberContactsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email" type="xs:string" minOccurs="0" />
+              <xs:element name="Mobile" msprop:Generator_ColumnVarNameInTable="columnMobile" msprop:Generator_ColumnPropNameInRow="Mobile" msprop:Generator_ColumnPropNameInTable="MobileColumn" msprop:Generator_UserColumnName="Mobile" type="xs:string" minOccurs="0" />
+              <xs:element name="Fax" msprop:Generator_ColumnVarNameInTable="columnFax" msprop:Generator_ColumnPropNameInRow="Fax" msprop:Generator_ColumnPropNameInTable="FaxColumn" msprop:Generator_UserColumnName="Fax" type="xs:string" minOccurs="0" />
+              <xs:element name="PreferredNotificationType" msprop:Generator_ColumnVarNameInTable="columnPreferredNotificationType" msprop:Generator_ColumnPropNameInRow="PreferredNotificationType" msprop:Generator_ColumnPropNameInTable="PreferredNotificationTypeColumn" msprop:Generator_UserColumnName="PreferredNotificationType" type="xs:int" minOccurs="0" />
+              <xs:element name="UniqueValue" msprop:Generator_ColumnVarNameInTable="columnUniqueValue" msprop:Generator_ColumnPropNameInRow="UniqueValue" msprop:Generator_ColumnPropNameInTable="UniqueValueColumn" msprop:Generator_UserColumnName="UniqueValue" type="xs:string" minOccurs="0" />
+              <xs:element name="IFAAddress" msprop:Generator_ColumnVarNameInTable="columnIFAAddress" msprop:Generator_ColumnPropNameInRow="IFAAddress" msprop:Generator_ColumnPropNameInTable="IFAAddressColumn" msprop:Generator_UserColumnName="IFAAddress" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EventkeyValues" msprop:Generator_TableClassName="EventkeyValuesDataTable" msprop:Generator_TableVarName="tableEventkeyValues" msprop:Generator_TablePropName="EventkeyValues" msprop:Generator_RowDeletingName="EventkeyValuesRowDeleting" msprop:Generator_RowChangingName="EventkeyValuesRowChanging" msprop:Generator_RowEvHandlerName="EventkeyValuesRowChangeEventHandler" msprop:Generator_RowDeletedName="EventkeyValuesRowDeleted" msprop:Generator_UserTableName="EventkeyValues" msprop:Generator_RowChangedName="EventkeyValuesRowChanged" msprop:Generator_RowEvArgName="EventkeyValuesRowChangeEvent" msprop:Generator_RowClassName="EventkeyValuesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EventkeyValueId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnEventkeyValueId" msprop:Generator_ColumnPropNameInRow="EventkeyValueId" msprop:Generator_ColumnPropNameInTable="EventkeyValueIdColumn" msprop:Generator_UserColumnName="EventkeyValueId" type="xs:int" />
+              <xs:element name="_EventKeyValueTypeID" msprop:Generator_ColumnVarNameInTable="column_EventKeyValueTypeID" msprop:Generator_ColumnPropNameInRow="_EventKeyValueTypeID" msprop:Generator_ColumnPropNameInTable="_EventKeyValueTypeIDColumn" msprop:Generator_UserColumnName="_EventKeyValueTypeID" type="xs:int" />
+              <xs:element name="EventKey" msprop:Generator_ColumnVarNameInTable="columnEventKey" msprop:Generator_ColumnPropNameInRow="EventKey" msprop:Generator_ColumnPropNameInTable="EventKeyColumn" msprop:Generator_UserColumnName="EventKey" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EventKeyValueExpresion" msprop:Generator_ColumnVarNameInTable="columnEventKeyValueExpresion" msprop:Generator_ColumnPropNameInRow="EventKeyValueExpresion" msprop:Generator_ColumnPropNameInTable="EventKeyValueExpresionColumn" msprop:Generator_UserColumnName="EventKeyValueExpresion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EventKeyValueParameters" msprop:Generator_ColumnVarNameInTable="columnEventKeyValueParameters" msprop:Generator_ColumnPropNameInRow="EventKeyValueParameters" msprop:Generator_ColumnPropNameInTable="EventKeyValueParametersColumn" msprop:Generator_UserColumnName="EventKeyValueParameters" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EventNotificationMessages" msprop:Generator_TableClassName="EventNotificationMessagesDataTable" msprop:Generator_TableVarName="tableEventNotificationMessages" msprop:Generator_RowChangedName="EventNotificationMessagesRowChanged" msprop:Generator_TablePropName="EventNotificationMessages" msprop:Generator_RowDeletingName="EventNotificationMessagesRowDeleting" msprop:Generator_RowChangingName="EventNotificationMessagesRowChanging" msprop:Generator_RowEvHandlerName="EventNotificationMessagesRowChangeEventHandler" msprop:Generator_RowDeletedName="EventNotificationMessagesRowDeleted" msprop:Generator_RowClassName="EventNotificationMessagesRow" msprop:Generator_UserTableName="EventNotificationMessages" msprop:Generator_RowEvArgName="EventNotificationMessagesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="_EventNotificationMessageID" msprop:Generator_ColumnVarNameInTable="column_EventNotificationMessageID" msprop:Generator_ColumnPropNameInRow="_EventNotificationMessageID" msprop:Generator_ColumnPropNameInTable="_EventNotificationMessageIDColumn" msprop:Generator_UserColumnName="_EventNotificationMessageID" type="xs:int" />
+              <xs:element name="_EventTypeID" msprop:Generator_ColumnVarNameInTable="column_EventTypeID" msprop:Generator_ColumnPropNameInRow="_EventTypeID" msprop:Generator_ColumnPropNameInTable="_EventTypeIDColumn" msprop:Generator_UserColumnName="_EventTypeID" type="xs:int" />
+              <xs:element name="_EventNotificationTypeID" msprop:Generator_ColumnVarNameInTable="column_EventNotificationTypeID" msprop:Generator_ColumnPropNameInRow="_EventNotificationTypeID" msprop:Generator_ColumnPropNameInTable="_EventNotificationTypeIDColumn" msprop:Generator_UserColumnName="_EventNotificationTypeID" type="xs:int" />
+              <xs:element name="EventNotificationMessageBody" msprop:Generator_ColumnVarNameInTable="columnEventNotificationMessageBody" msprop:Generator_ColumnPropNameInRow="EventNotificationMessageBody" msprop:Generator_ColumnPropNameInTable="EventNotificationMessageBodyColumn" msprop:Generator_UserColumnName="EventNotificationMessageBody">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EventNotificationMessageTitle" msprop:Generator_ColumnVarNameInTable="columnEventNotificationMessageTitle" msprop:Generator_ColumnPropNameInRow="EventNotificationMessageTitle" msprop:Generator_ColumnPropNameInTable="EventNotificationMessageTitleColumn" msprop:Generator_UserColumnName="EventNotificationMessageTitle" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MarketID" msprop:Generator_ColumnVarNameInTable="columnMarketID" msprop:Generator_ColumnPropNameInRow="MarketID" msprop:Generator_ColumnPropNameInTable="MarketIDColumn" msprop:Generator_UserColumnName="MarketID" type="xs:short" minOccurs="0" />
+              <xs:element name="CompanyCode" msprop:Generator_ColumnVarNameInTable="columnCompanyCode" msprop:Generator_ColumnPropNameInRow="CompanyCode" msprop:Generator_ColumnPropNameInTable="CompanyCodeColumn" msprop:Generator_UserColumnName="CompanyCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EventNotificationMessageSender" msprop:Generator_ColumnVarNameInTable="columnEventNotificationMessageSender" msprop:Generator_ColumnPropNameInRow="EventNotificationMessageSender" msprop:Generator_ColumnPropNameInTable="EventNotificationMessageSenderColumn" msprop:Generator_UserColumnName="EventNotificationMessageSender" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="_EventReciverTypeID" msprop:Generator_ColumnVarNameInTable="column_EventReciverTypeID" msprop:Generator_ColumnPropNameInRow="_EventReciverTypeID" msprop:Generator_ColumnPropNameInTable="_EventReciverTypeIDColumn" msprop:Generator_UserColumnName="_EventReciverTypeID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EventSubscribers" msprop:Generator_TableClassName="EventSubscribersDataTable" msprop:Generator_TableVarName="tableEventSubscribers" msprop:Generator_TablePropName="EventSubscribers" msprop:Generator_RowDeletingName="EventSubscribersRowDeleting" msprop:Generator_RowChangingName="EventSubscribersRowChanging" msprop:Generator_RowEvHandlerName="EventSubscribersRowChangeEventHandler" msprop:Generator_RowDeletedName="EventSubscribersRowDeleted" msprop:Generator_UserTableName="EventSubscribers" msprop:Generator_RowChangedName="EventSubscribersRowChanged" msprop:Generator_RowEvArgName="EventSubscribersRowChangeEvent" msprop:Generator_RowClassName="EventSubscribersRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EventID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnEventID" msprop:Generator_ColumnPropNameInRow="EventID" msprop:Generator_ColumnPropNameInTable="EventIDColumn" msprop:Generator_UserColumnName="EventID" type="xs:int" />
+              <xs:element name="EventTypeID" msprop:Generator_ColumnVarNameInTable="columnEventTypeID" msprop:Generator_ColumnPropNameInRow="EventTypeID" msprop:Generator_ColumnPropNameInTable="EventTypeIDColumn" msprop:Generator_UserColumnName="EventTypeID" type="xs:int" />
+              <xs:element name="EventDescA" msprop:Generator_ColumnVarNameInTable="columnEventDescA" msprop:Generator_ColumnPropNameInRow="EventDescA" msprop:Generator_ColumnPropNameInTable="EventDescAColumn" msprop:Generator_UserColumnName="EventDescA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EventDescE" msprop:Generator_ColumnVarNameInTable="columnEventDescE" msprop:Generator_ColumnPropNameInRow="EventDescE" msprop:Generator_ColumnPropNameInTable="EventDescEColumn" msprop:Generator_UserColumnName="EventDescE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EventTempTable" msprop:Generator_ColumnVarNameInTable="columnEventTempTable" msprop:Generator_ColumnPropNameInRow="EventTempTable" msprop:Generator_ColumnPropNameInTable="EventTempTableColumn" msprop:Generator_UserColumnName="EventTempTable" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsMarketEvent" msprop:Generator_ColumnVarNameInTable="columnIsMarketEvent" msprop:Generator_ColumnPropNameInRow="IsMarketEvent" msprop:Generator_ColumnPropNameInTable="IsMarketEventColumn" msprop:Generator_UserColumnName="IsMarketEvent" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IsCompanyEvent" msprop:Generator_ColumnVarNameInTable="columnIsCompanyEvent" msprop:Generator_ColumnPropNameInRow="IsCompanyEvent" msprop:Generator_ColumnPropNameInTable="IsCompanyEventColumn" msprop:Generator_UserColumnName="IsCompanyEvent" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CompanyColumn" msprop:Generator_ColumnVarNameInTable="columnCompanyColumn" msprop:Generator_ColumnPropNameInRow="CompanyColumn" msprop:Generator_ColumnPropNameInTable="CompanyColumnColumn" msprop:Generator_UserColumnName="CompanyColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MarketColumn" msprop:Generator_ColumnVarNameInTable="columnMarketColumn" msprop:Generator_ColumnPropNameInRow="MarketColumn" msprop:Generator_ColumnPropNameInTable="MarketColumnColumn" msprop:Generator_UserColumnName="MarketColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EventMessageBody" msprop:Generator_ColumnVarNameInTable="columnEventMessageBody" msprop:Generator_ColumnPropNameInRow="EventMessageBody" msprop:Generator_ColumnPropNameInTable="EventMessageBodyColumn" msprop:Generator_UserColumnName="EventMessageBody" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreationDate" msprop:Generator_ColumnVarNameInTable="columnCreationDate" msprop:Generator_ColumnPropNameInRow="CreationDate" msprop:Generator_ColumnPropNameInTable="CreationDateColumn" msprop:Generator_UserColumnName="CreationDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EventMarketID" msprop:Generator_ColumnVarNameInTable="columnEventMarketID" msprop:Generator_ColumnPropNameInRow="EventMarketID" msprop:Generator_ColumnPropNameInTable="EventMarketIDColumn" msprop:Generator_UserColumnName="EventMarketID" type="xs:short" minOccurs="0" />
+              <xs:element name="EventCompanyCode" msprop:Generator_ColumnVarNameInTable="columnEventCompanyCode" msprop:Generator_ColumnPropNameInRow="EventCompanyCode" msprop:Generator_ColumnPropNameInTable="EventCompanyCodeColumn" msprop:Generator_UserColumnName="EventCompanyCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EventSubscriberID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnEventSubscriberID" msprop:Generator_ColumnPropNameInRow="EventSubscriberID" msprop:Generator_ColumnPropNameInTable="EventSubscriberIDColumn" msprop:Generator_UserColumnName="EventSubscriberID" type="xs:int" />
+              <xs:element name="EventReciverID" msprop:Generator_ColumnVarNameInTable="columnEventReciverID" msprop:Generator_ColumnPropNameInRow="EventReciverID" msprop:Generator_ColumnPropNameInTable="EventReciverIDColumn" msprop:Generator_UserColumnName="EventReciverID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EventReciverTypeID" msprop:Generator_ColumnVarNameInTable="columnEventReciverTypeID" msprop:Generator_ColumnPropNameInRow="EventReciverTypeID" msprop:Generator_ColumnPropNameInTable="EventReciverTypeIDColumn" msprop:Generator_UserColumnName="EventReciverTypeID" type="xs:int" />
+              <xs:element name="MarketID" msprop:Generator_ColumnVarNameInTable="columnMarketID" msprop:Generator_ColumnPropNameInRow="MarketID" msprop:Generator_ColumnPropNameInTable="MarketIDColumn" msprop:Generator_UserColumnName="MarketID" type="xs:short" minOccurs="0" />
+              <xs:element name="CompanyCode" msprop:Generator_ColumnVarNameInTable="columnCompanyCode" msprop:Generator_ColumnPropNameInRow="CompanyCode" msprop:Generator_ColumnPropNameInTable="CompanyCodeColumn" msprop:Generator_UserColumnName="CompanyCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HubID" msprop:Generator_ColumnVarNameInTable="columnHubID" msprop:Generator_ColumnPropNameInRow="HubID" msprop:Generator_ColumnPropNameInTable="HubIDColumn" msprop:Generator_UserColumnName="HubID" type="xs:int" minOccurs="0" />
+              <xs:element name="_EventNotificationTypeID" msprop:Generator_ColumnVarNameInTable="column_EventNotificationTypeID" msprop:Generator_ColumnPropNameInRow="_EventNotificationTypeID" msprop:Generator_ColumnPropNameInTable="_EventNotificationTypeIDColumn" msprop:Generator_UserColumnName="_EventNotificationTypeID" type="xs:int" />
+              <xs:element name="EventReciverTable" msprop:Generator_ColumnVarNameInTable="columnEventReciverTable" msprop:Generator_ColumnPropNameInRow="EventReciverTable" msprop:Generator_ColumnPropNameInTable="EventReciverTableColumn" msprop:Generator_UserColumnName="EventReciverTable" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EventReciverTableIdentityColumn" msprop:Generator_ColumnVarNameInTable="columnEventReciverTableIdentityColumn" msprop:Generator_ColumnPropNameInRow="EventReciverTableIdentityColumn" msprop:Generator_ColumnPropNameInTable="EventReciverTableIdentityColumnColumn" msprop:Generator_UserColumnName="EventReciverTableIdentityColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EventReciverTableEmailColumn" msprop:Generator_ColumnVarNameInTable="columnEventReciverTableEmailColumn" msprop:Generator_ColumnPropNameInRow="EventReciverTableEmailColumn" msprop:Generator_ColumnPropNameInTable="EventReciverTableEmailColumnColumn" msprop:Generator_UserColumnName="EventReciverTableEmailColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EventReciverTableMobileColumn" msprop:Generator_ColumnVarNameInTable="columnEventReciverTableMobileColumn" msprop:Generator_ColumnPropNameInRow="EventReciverTableMobileColumn" msprop:Generator_ColumnPropNameInTable="EventReciverTableMobileColumnColumn" msprop:Generator_UserColumnName="EventReciverTableMobileColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EventReciverTableFaxColumn" msprop:Generator_ColumnVarNameInTable="columnEventReciverTableFaxColumn" msprop:Generator_ColumnPropNameInRow="EventReciverTableFaxColumn" msprop:Generator_ColumnPropNameInTable="EventReciverTableFaxColumnColumn" msprop:Generator_UserColumnName="EventReciverTableFaxColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EventReciverTablePreferredNotificationTypeColumn" msprop:Generator_ColumnVarNameInTable="columnEventReciverTablePreferredNotificationTypeColumn" msprop:Generator_ColumnPropNameInRow="EventReciverTablePreferredNotificationTypeColumn" msprop:Generator_ColumnPropNameInTable="EventReciverTablePreferredNotificationTypeColumnColumn" msprop:Generator_UserColumnName="EventReciverTablePreferredNotificationTypeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EventReciverTableUniqueValueColumn" msprop:Generator_ColumnVarNameInTable="columnEventReciverTableUniqueValueColumn" msprop:Generator_ColumnPropNameInRow="EventReciverTableUniqueValueColumn" msprop:Generator_ColumnPropNameInTable="EventReciverTableUniqueValueColumnColumn" msprop:Generator_UserColumnName="EventReciverTableUniqueValueColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="_EventReciverTypeID" msprop:Generator_ColumnVarNameInTable="column_EventReciverTypeID" msprop:Generator_ColumnPropNameInRow="_EventReciverTypeID" msprop:Generator_ColumnPropNameInTable="_EventReciverTypeIDColumn" msprop:Generator_UserColumnName="_EventReciverTypeID" type="xs:int" />
+              <xs:element name="ExpiryDate" msprop:Generator_ColumnVarNameInTable="columnExpiryDate" msprop:Generator_ColumnPropNameInRow="ExpiryDate" msprop:Generator_ColumnPropNameInTable="ExpiryDateColumn" msprop:Generator_UserColumnName="ExpiryDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EventReciverIFAColumn" msprop:Generator_ColumnVarNameInTable="columnEventReciverIFAColumn" msprop:Generator_ColumnPropNameInRow="EventReciverIFAColumn" msprop:Generator_ColumnPropNameInTable="EventReciverIFAColumnColumn" msprop:Generator_UserColumnName="EventReciverIFAColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EventIFANotifications" msprop:Generator_TableClassName="EventIFANotificationsDataTable" msprop:Generator_TableVarName="tableEventIFANotifications" msprop:Generator_TablePropName="EventIFANotifications" msprop:Generator_RowDeletingName="EventIFANotificationsRowDeleting" msprop:Generator_RowChangingName="EventIFANotificationsRowChanging" msprop:Generator_RowEvHandlerName="EventIFANotificationsRowChangeEventHandler" msprop:Generator_RowDeletedName="EventIFANotificationsRowDeleted" msprop:Generator_UserTableName="EventIFANotifications" msprop:Generator_RowChangedName="EventIFANotificationsRowChanged" msprop:Generator_RowEvArgName="EventIFANotificationsRowChangeEvent" msprop:Generator_RowClassName="EventIFANotificationsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EventIFANotificationID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnEventIFANotificationID" msprop:Generator_ColumnPropNameInRow="EventIFANotificationID" msprop:Generator_ColumnPropNameInTable="EventIFANotificationIDColumn" msprop:Generator_UserColumnName="EventIFANotificationID" type="xs:int" />
+              <xs:element name="EventMessageID" msprop:Generator_ColumnVarNameInTable="columnEventMessageID" msprop:Generator_ColumnPropNameInRow="EventMessageID" msprop:Generator_ColumnPropNameInTable="EventMessageIDColumn" msprop:Generator_UserColumnName="EventMessageID" type="xs:int" />
+              <xs:element name="EventIFANotificationBody" msprop:Generator_ColumnVarNameInTable="columnEventIFANotificationBody" msprop:Generator_ColumnPropNameInRow="EventIFANotificationBody" msprop:Generator_ColumnPropNameInTable="EventIFANotificationBodyColumn" msprop:Generator_UserColumnName="EventIFANotificationBody">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EventIFANotificationTitle" msprop:Generator_ColumnVarNameInTable="columnEventIFANotificationTitle" msprop:Generator_ColumnPropNameInRow="EventIFANotificationTitle" msprop:Generator_ColumnPropNameInTable="EventIFANotificationTitleColumn" msprop:Generator_UserColumnName="EventIFANotificationTitle">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EventIFASubscriberID" msprop:Generator_ColumnVarNameInTable="columnEventIFASubscriberID" msprop:Generator_ColumnPropNameInRow="EventIFASubscriberID" msprop:Generator_ColumnPropNameInTable="EventIFASubscriberIDColumn" msprop:Generator_UserColumnName="EventIFASubscriberID" type="xs:int" />
+              <xs:element name="EventIFASubscriberNotificationAddress" msprop:Generator_ColumnVarNameInTable="columnEventIFASubscriberNotificationAddress" msprop:Generator_ColumnPropNameInRow="EventIFASubscriberNotificationAddress" msprop:Generator_ColumnPropNameInTable="EventIFASubscriberNotificationAddressColumn" msprop:Generator_UserColumnName="EventIFASubscriberNotificationAddress">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="_EventMessagesStatusID" msprop:Generator_ColumnVarNameInTable="column_EventMessagesStatusID" msprop:Generator_ColumnPropNameInRow="_EventMessagesStatusID" msprop:Generator_ColumnPropNameInTable="_EventMessagesStatusIDColumn" msprop:Generator_UserColumnName="_EventMessagesStatusID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EventMessages" msprop:Generator_TableClassName="EventMessagesDataTable" msprop:Generator_TableVarName="tableEventMessages" msprop:Generator_RowChangedName="EventMessagesRowChanged" msprop:Generator_TablePropName="EventMessages" msprop:Generator_RowDeletingName="EventMessagesRowDeleting" msprop:Generator_RowChangingName="EventMessagesRowChanging" msprop:Generator_RowEvHandlerName="EventMessagesRowChangeEventHandler" msprop:Generator_RowDeletedName="EventMessagesRowDeleted" msprop:Generator_RowClassName="EventMessagesRow" msprop:Generator_UserTableName="EventMessages" msprop:Generator_RowEvArgName="EventMessagesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EventMessageID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnEventMessageID" msprop:Generator_ColumnPropNameInRow="EventMessageID" msprop:Generator_ColumnPropNameInTable="EventMessageIDColumn" msprop:Generator_UserColumnName="EventMessageID" type="xs:int" />
+              <xs:element name="_EventTypeID" msprop:Generator_ColumnVarNameInTable="column_EventTypeID" msprop:Generator_ColumnPropNameInRow="_EventTypeID" msprop:Generator_ColumnPropNameInTable="_EventTypeIDColumn" msprop:Generator_UserColumnName="_EventTypeID" type="xs:int" />
+              <xs:element name="CreationDate" msprop:Generator_ColumnVarNameInTable="columnCreationDate" msprop:Generator_ColumnPropNameInRow="CreationDate" msprop:Generator_ColumnPropNameInTable="CreationDateColumn" msprop:Generator_UserColumnName="CreationDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MessageBody" msprop:Generator_ColumnVarNameInTable="columnMessageBody" msprop:Generator_ColumnPropNameInRow="MessageBody" msprop:Generator_ColumnPropNameInTable="MessageBodyColumn" msprop:Generator_UserColumnName="MessageBody" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MarketID" msprop:Generator_ColumnVarNameInTable="columnMarketID" msprop:Generator_ColumnPropNameInRow="MarketID" msprop:Generator_ColumnPropNameInTable="MarketIDColumn" msprop:Generator_UserColumnName="MarketID" type="xs:short" minOccurs="0" />
+              <xs:element name="CompanyCode" msprop:Generator_ColumnVarNameInTable="columnCompanyCode" msprop:Generator_ColumnPropNameInRow="CompanyCode" msprop:Generator_ColumnPropNameInTable="CompanyCodeColumn" msprop:Generator_UserColumnName="CompanyCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExpiryDate" msprop:Generator_ColumnVarNameInTable="columnExpiryDate" msprop:Generator_ColumnPropNameInRow="ExpiryDate" msprop:Generator_ColumnPropNameInTable="ExpiryDateColumn" msprop:Generator_UserColumnName="ExpiryDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="_EventMessagesStatusID" msprop:Generator_ColumnVarNameInTable="column_EventMessagesStatusID" msprop:Generator_ColumnPropNameInRow="_EventMessagesStatusID" msprop:Generator_ColumnPropNameInTable="_EventMessagesStatusIDColumn" msprop:Generator_UserColumnName="_EventMessagesStatusID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MSMQEventTypes" msprop:Generator_TableClassName="MSMQEventTypesDataTable" msprop:Generator_TableVarName="tableMSMQEventTypes" msprop:Generator_TablePropName="MSMQEventTypes" msprop:Generator_RowDeletingName="MSMQEventTypesRowDeleting" msprop:Generator_RowChangingName="MSMQEventTypesRowChanging" msprop:Generator_RowEvHandlerName="MSMQEventTypesRowChangeEventHandler" msprop:Generator_RowDeletedName="MSMQEventTypesRowDeleted" msprop:Generator_UserTableName="MSMQEventTypes" msprop:Generator_RowChangedName="MSMQEventTypesRowChanged" msprop:Generator_RowEvArgName="MSMQEventTypesRowChangeEvent" msprop:Generator_RowClassName="MSMQEventTypesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MSMQEventID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnMSMQEventID" msprop:Generator_ColumnPropNameInRow="MSMQEventID" msprop:Generator_ColumnPropNameInTable="MSMQEventIDColumn" msprop:Generator_UserColumnName="MSMQEventID" type="xs:int" />
+              <xs:element name="MSMQName" msprop:Generator_ColumnVarNameInTable="columnMSMQName" msprop:Generator_ColumnPropNameInRow="MSMQName" msprop:Generator_ColumnPropNameInTable="MSMQNameColumn" msprop:Generator_UserColumnName="MSMQName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MSMQLabel" msprop:Generator_ColumnVarNameInTable="columnMSMQLabel" msprop:Generator_ColumnPropNameInRow="MSMQLabel" msprop:Generator_ColumnPropNameInTable="MSMQLabelColumn" msprop:Generator_UserColumnName="MSMQLabel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="_EventTypeID" msprop:Generator_ColumnVarNameInTable="column_EventTypeID" msprop:Generator_ColumnPropNameInRow="_EventTypeID" msprop:Generator_ColumnPropNameInTable="_EventTypeIDColumn" msprop:Generator_UserColumnName="_EventTypeID" type="xs:int" minOccurs="0" />
+              <xs:element name="IsDefault" msprop:Generator_ColumnVarNameInTable="columnIsDefault" msprop:Generator_ColumnPropNameInRow="IsDefault" msprop:Generator_ColumnPropNameInTable="IsDefaultColumn" msprop:Generator_UserColumnName="IsDefault" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="_EventMessagesStatusSetps" msprop:Generator_TableClassName="_EventMessagesStatusSetpsDataTable" msprop:Generator_TableVarName="table_EventMessagesStatusSetps" msprop:Generator_TablePropName="_EventMessagesStatusSetps" msprop:Generator_RowDeletingName="_EventMessagesStatusSetpsRowDeleting" msprop:Generator_RowChangingName="_EventMessagesStatusSetpsRowChanging" msprop:Generator_RowEvHandlerName="_EventMessagesStatusSetpsRowChangeEventHandler" msprop:Generator_RowDeletedName="_EventMessagesStatusSetpsRowDeleted" msprop:Generator_UserTableName="_EventMessagesStatusSetps" msprop:Generator_RowChangedName="_EventMessagesStatusSetpsRowChanged" msprop:Generator_RowEvArgName="_EventMessagesStatusSetpsRowChangeEvent" msprop:Generator_RowClassName="_EventMessagesStatusSetpsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="_EventMessagesStatusSetpID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="column_EventMessagesStatusSetpID" msprop:Generator_ColumnPropNameInRow="_EventMessagesStatusSetpID" msprop:Generator_ColumnPropNameInTable="_EventMessagesStatusSetpIDColumn" msprop:Generator_UserColumnName="_EventMessagesStatusSetpID" type="xs:int" />
+              <xs:element name="_EventTypeID" msprop:Generator_ColumnVarNameInTable="column_EventTypeID" msprop:Generator_ColumnPropNameInRow="_EventTypeID" msprop:Generator_ColumnPropNameInTable="_EventTypeIDColumn" msprop:Generator_UserColumnName="_EventTypeID" type="xs:int" />
+              <xs:element name="_EventMessagesStatusID" msprop:Generator_ColumnVarNameInTable="column_EventMessagesStatusID" msprop:Generator_ColumnPropNameInRow="_EventMessagesStatusID" msprop:Generator_ColumnPropNameInTable="_EventMessagesStatusIDColumn" msprop:Generator_UserColumnName="_EventMessagesStatusID" type="xs:int" />
+              <xs:element name="_EventMessagesStatusStrategyID" msprop:Generator_ColumnVarNameInTable="column_EventMessagesStatusStrategyID" msprop:Generator_ColumnPropNameInRow="_EventMessagesStatusStrategyID" msprop:Generator_ColumnPropNameInTable="_EventMessagesStatusStrategyIDColumn" msprop:Generator_UserColumnName="_EventMessagesStatusStrategyID" type="xs:int" />
+              <xs:element name="CollateralEventType" msprop:Generator_ColumnVarNameInTable="columnCollateralEventType" msprop:Generator_ColumnPropNameInRow="CollateralEventType" msprop:Generator_ColumnPropNameInTable="CollateralEventTypeColumn" msprop:Generator_UserColumnName="CollateralEventType" type="xs:int" minOccurs="0" />
+              <xs:element name="CollateralEventBody" msprop:Generator_ColumnVarNameInTable="columnCollateralEventBody" msprop:Generator_ColumnPropNameInRow="CollateralEventBody" msprop:Generator_ColumnPropNameInTable="CollateralEventBodyColumn" msprop:Generator_UserColumnName="CollateralEventBody" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsChangeable" msprop:Generator_ColumnVarNameInTable="columnIsChangeable" msprop:Generator_ColumnPropNameInRow="IsChangeable" msprop:Generator_ColumnPropNameInTable="IsChangeableColumn" msprop:Generator_UserColumnName="IsChangeable" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EventMessageIFANotifications" msprop:Generator_TableClassName="EventMessageIFANotificationsDataTable" msprop:Generator_TableVarName="tableEventMessageIFANotifications" msprop:Generator_TablePropName="EventMessageIFANotifications" msprop:Generator_RowDeletingName="EventMessageIFANotificationsRowDeleting" msprop:Generator_RowChangingName="EventMessageIFANotificationsRowChanging" msprop:Generator_RowEvHandlerName="EventMessageIFANotificationsRowChangeEventHandler" msprop:Generator_RowDeletedName="EventMessageIFANotificationsRowDeleted" msprop:Generator_UserTableName="EventMessageIFANotifications" msprop:Generator_RowChangedName="EventMessageIFANotificationsRowChanged" msprop:Generator_RowEvArgName="EventMessageIFANotificationsRowChangeEvent" msprop:Generator_RowClassName="EventMessageIFANotificationsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EventIFANotificationID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnEventIFANotificationID" msprop:Generator_ColumnPropNameInRow="EventIFANotificationID" msprop:Generator_ColumnPropNameInTable="EventIFANotificationIDColumn" msprop:Generator_UserColumnName="EventIFANotificationID" type="xs:int" />
+              <xs:element name="EventMessageID" msprop:Generator_ColumnVarNameInTable="columnEventMessageID" msprop:Generator_ColumnPropNameInRow="EventMessageID" msprop:Generator_ColumnPropNameInTable="EventMessageIDColumn" msprop:Generator_UserColumnName="EventMessageID" type="xs:int" />
+              <xs:element name="EventIFANotificationBody" msprop:Generator_ColumnVarNameInTable="columnEventIFANotificationBody" msprop:Generator_ColumnPropNameInRow="EventIFANotificationBody" msprop:Generator_ColumnPropNameInTable="EventIFANotificationBodyColumn" msprop:Generator_UserColumnName="EventIFANotificationBody">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EventIFANotificationTitle" msprop:Generator_ColumnVarNameInTable="columnEventIFANotificationTitle" msprop:Generator_ColumnPropNameInRow="EventIFANotificationTitle" msprop:Generator_ColumnPropNameInTable="EventIFANotificationTitleColumn" msprop:Generator_UserColumnName="EventIFANotificationTitle">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EventIFASubscriberID" msprop:Generator_ColumnVarNameInTable="columnEventIFASubscriberID" msprop:Generator_ColumnPropNameInRow="EventIFASubscriberID" msprop:Generator_ColumnPropNameInTable="EventIFASubscriberIDColumn" msprop:Generator_UserColumnName="EventIFASubscriberID" type="xs:int" />
+              <xs:element name="EventIFASubscriberNotificationAddress" msprop:Generator_ColumnVarNameInTable="columnEventIFASubscriberNotificationAddress" msprop:Generator_ColumnPropNameInRow="EventIFASubscriberNotificationAddress" msprop:Generator_ColumnPropNameInTable="EventIFASubscriberNotificationAddressColumn" msprop:Generator_UserColumnName="EventIFASubscriberNotificationAddress">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="_EventMessagesStatusID" msprop:Generator_ColumnVarNameInTable="column_EventMessagesStatusID" msprop:Generator_ColumnPropNameInRow="_EventMessagesStatusID" msprop:Generator_ColumnPropNameInTable="_EventMessagesStatusIDColumn" msprop:Generator_UserColumnName="_EventMessagesStatusID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="UserIFANotifications" msprop:Generator_TableClassName="UserIFANotificationsDataTable" msprop:Generator_TableVarName="tableUserIFANotifications" msprop:Generator_RowChangedName="UserIFANotificationsRowChanged" msprop:Generator_TablePropName="UserIFANotifications" msprop:Generator_RowDeletingName="UserIFANotificationsRowDeleting" msprop:Generator_RowChangingName="UserIFANotificationsRowChanging" msprop:Generator_RowEvHandlerName="UserIFANotificationsRowChangeEventHandler" msprop:Generator_RowDeletedName="UserIFANotificationsRowDeleted" msprop:Generator_RowClassName="UserIFANotificationsRow" msprop:Generator_UserTableName="UserIFANotifications" msprop:Generator_RowEvArgName="UserIFANotificationsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EventIFANotificationID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnEventIFANotificationID" msprop:Generator_ColumnPropNameInRow="EventIFANotificationID" msprop:Generator_ColumnPropNameInTable="EventIFANotificationIDColumn" msprop:Generator_UserColumnName="EventIFANotificationID" type="xs:int" />
+              <xs:element name="EventMessageID" msprop:Generator_ColumnVarNameInTable="columnEventMessageID" msprop:Generator_ColumnPropNameInRow="EventMessageID" msprop:Generator_ColumnPropNameInTable="EventMessageIDColumn" msprop:Generator_UserColumnName="EventMessageID" type="xs:int" />
+              <xs:element name="EventIFANotificationBody" msprop:Generator_ColumnVarNameInTable="columnEventIFANotificationBody" msprop:Generator_ColumnPropNameInRow="EventIFANotificationBody" msprop:Generator_ColumnPropNameInTable="EventIFANotificationBodyColumn" msprop:Generator_UserColumnName="EventIFANotificationBody">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EventIFANotificationTitle" msprop:Generator_ColumnVarNameInTable="columnEventIFANotificationTitle" msprop:Generator_ColumnPropNameInRow="EventIFANotificationTitle" msprop:Generator_ColumnPropNameInTable="EventIFANotificationTitleColumn" msprop:Generator_UserColumnName="EventIFANotificationTitle">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EventIFASubscriberID" msprop:Generator_ColumnVarNameInTable="columnEventIFASubscriberID" msprop:Generator_ColumnPropNameInRow="EventIFASubscriberID" msprop:Generator_ColumnPropNameInTable="EventIFASubscriberIDColumn" msprop:Generator_UserColumnName="EventIFASubscriberID" type="xs:int" />
+              <xs:element name="EventIFASubscriberNotificationAddress" msprop:Generator_ColumnVarNameInTable="columnEventIFASubscriberNotificationAddress" msprop:Generator_ColumnPropNameInRow="EventIFASubscriberNotificationAddress" msprop:Generator_ColumnPropNameInTable="EventIFASubscriberNotificationAddressColumn" msprop:Generator_UserColumnName="EventIFASubscriberNotificationAddress">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="_EventMessagesStatusID" msprop:Generator_ColumnVarNameInTable="column_EventMessagesStatusID" msprop:Generator_ColumnPropNameInRow="_EventMessagesStatusID" msprop:Generator_ColumnPropNameInTable="_EventMessagesStatusIDColumn" msprop:Generator_UserColumnName="_EventMessagesStatusID" type="xs:int" />
+              <xs:element name="ParentEventMessageID" msprop:Generator_ColumnVarNameInTable="columnParentEventMessageID" msprop:Generator_ColumnPropNameInRow="ParentEventMessageID" msprop:Generator_ColumnPropNameInTable="ParentEventMessageIDColumn" msprop:Generator_UserColumnName="ParentEventMessageID" type="xs:int" minOccurs="0" />
+              <xs:element name="ExpiryDate" msprop:Generator_ColumnVarNameInTable="columnExpiryDate" msprop:Generator_ColumnPropNameInRow="ExpiryDate" msprop:Generator_ColumnPropNameInTable="ExpiryDateColumn" msprop:Generator_UserColumnName="ExpiryDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EventMessageStatus" msprop:Generator_ColumnVarNameInTable="columnEventMessageStatus" msprop:Generator_ColumnPropNameInRow="EventMessageStatus" msprop:Generator_ColumnPropNameInTable="EventMessageStatusColumn" msprop:Generator_UserColumnName="EventMessageStatus" type="xs:int" minOccurs="0" />
+              <xs:element name="FirstParentEventmessageID" msprop:Generator_ColumnVarNameInTable="columnFirstParentEventmessageID" msprop:Generator_ColumnPropNameInRow="FirstParentEventmessageID" msprop:Generator_ColumnPropNameInTable="FirstParentEventmessageIDColumn" msprop:Generator_UserColumnName="FirstParentEventmessageID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:EventkeyValues" />
+      <xs:field xpath="mstns:EventkeyValueId" />
+    </xs:unique>
+    <xs:unique name="EventNotificationMessages_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:EventNotificationMessages" />
+      <xs:field xpath="mstns:_EventNotificationMessageID" />
+    </xs:unique>
+    <xs:unique name="EventIFANotifications_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:EventIFANotifications" />
+      <xs:field xpath="mstns:EventIFANotificationID" />
+    </xs:unique>
+    <xs:unique name="EventMessages_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:EventMessages" />
+      <xs:field xpath="mstns:EventMessageID" />
+    </xs:unique>
+    <xs:unique name="MSMQEventTypes_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:MSMQEventTypes" />
+      <xs:field xpath="mstns:MSMQEventID" />
+    </xs:unique>
+    <xs:unique name="_EventMessagesStatusSetps_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:_EventMessagesStatusSetps" />
+      <xs:field xpath="mstns:_EventMessagesStatusSetpID" />
+    </xs:unique>
+    <xs:unique name="EventMessageIFANotifications_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:EventMessageIFANotifications" />
+      <xs:field xpath="mstns:EventIFANotificationID" />
+    </xs:unique>
+    <xs:unique name="UserIFANotifications_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:UserIFANotifications" />
+      <xs:field xpath="mstns:EventIFANotificationID" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="EventMessages_EventIFANotifications" msdata:parent="EventMessages" msdata:child="EventIFANotifications" msdata:parentkey="EventMessageID" msdata:childkey="EventMessageID" msprop:Generator_UserChildTable="EventIFANotifications" msprop:Generator_ChildPropName="GetEventIFANotificationsRows" msprop:Generator_UserRelationName="EventMessages_EventIFANotifications" msprop:Generator_ParentPropName="EventMessagesRow" msprop:Generator_RelationVarName="relationEventMessages_EventIFANotifications" msprop:Generator_UserParentTable="EventMessages" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

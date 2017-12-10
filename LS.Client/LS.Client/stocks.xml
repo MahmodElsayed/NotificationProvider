@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<dsStocksList xmlns="http://tempuri.org/dsStocksList.xsd">
+  <Stocks>
+    <StockName>CIB BANK</StockName>
+    <Cdoe>EGS900</Cdoe>
+    <MessageType>MarketPrices</MessageType>
+    <Subscibe>true</Subscibe>
+    <IsActive>true</IsActive>
+  </Stocks>
+  <Stocks>
+    <StockName>Pharous</StockName>
+    <Cdoe>EGS800</Cdoe>
+    <MessageType>MarketPrices</MessageType>
+    <Subscibe>true</Subscibe>
+    <IsActive>true</IsActive>
+  </Stocks>
+
+  <Stocks>
+    <StockName>Ezz Steel</StockName>
+    <Cdoe>EGS700</Cdoe>
+    <MessageType>MarketPrices</MessageType>
+    <Subscibe>true</Subscibe>
+    <IsActive>true</IsActive>
+  </Stocks>
+</dsStocksList>

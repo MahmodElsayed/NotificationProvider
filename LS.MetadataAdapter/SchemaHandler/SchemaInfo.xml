@@ -1,0 +1,114 @@
+﻿<?xml version="1.0"?>
+<SchemaInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SchemaList>
+
+    <MsgTypeSchema>
+      <Exchange>EGX</Exchange>
+      <MessageType>SymbolsMarketStatistics</MessageType>
+      <SchemaCode>sy</SchemaCode>
+    
+      <ColumnsList>
+          <ColumnInfo>
+          <ColumnName>SymbolID</ColumnName>
+          <DataType>System.String</DataType>
+          <DefaultVal></DefaultVal>
+       </ColumnInfo>
+
+        <ColumnInfo>
+          <ColumnName>LastPrice</ColumnName>
+          <DataType>System.Decimal</DataType>
+          <DefaultVal></DefaultVal>
+        </ColumnInfo>
+
+        <ColumnInfo>
+          <ColumnName>Quantity</ColumnName>
+          <DataType>System.Decimal</DataType>
+          <DefaultVal></DefaultVal>
+        </ColumnInfo>
+
+        <ColumnInfo>
+          <ColumnName>TradesCount</ColumnName>
+          <DataType>System.Int32</DataType>
+          <DefaultVal></DefaultVal>
+        </ColumnInfo>
+        
+      </ColumnsList>
+    </MsgTypeSchema>
+
+    <MsgTypeSchema>
+      <Exchange>EGX</Exchange>
+      <MessageType>MarketByOrders</MessageType>
+      <SchemaCode>mbo</SchemaCode>
+
+      <ColumnsList>
+        <ColumnInfo>
+          <ColumnName>SymbolID</ColumnName>
+          <DataType>System.String</DataType>
+          <DefaultVal></DefaultVal>
+        </ColumnInfo>
+
+        <ColumnInfo>
+          <ColumnName>LastPrice</ColumnName>
+          <DataType>System.Decimal</DataType>
+          <DefaultVal></DefaultVal>
+        </ColumnInfo>
+
+        <ColumnInfo>
+          <ColumnName>Quantity</ColumnName>
+          <DataType>System.Decimal</DataType>
+          <DefaultVal></DefaultVal>
+        </ColumnInfo>
+
+        <ColumnInfo>
+          <ColumnName>TradesCount</ColumnName>
+          <DataType>System.Int32</DataType>
+          <DefaultVal></DefaultVal>
+        </ColumnInfo>
+
+      </ColumnsList>
+    </MsgTypeSchema>
+
+    <MsgTypeSchema>
+      <Exchange>EGX</Exchange>
+      <MessageType>MarketPrices</MessageType>
+      <SchemaCode>schmp</SchemaCode>
+
+      <ColumnsList>
+
+        <ColumnInfo>
+          <ColumnName>SubscriptionCode</ColumnName>
+          <DataType>System.String</DataType>
+          <DefaultVal></DefaultVal>
+        </ColumnInfo>
+
+
+        <ColumnInfo>
+          <ColumnName>Code</ColumnName>
+          <DataType>System.String</DataType>
+          <DefaultVal></DefaultVal>
+        </ColumnInfo>
+
+      
+        <ColumnInfo>
+          <ColumnName>LastPrice</ColumnName>
+          <DataType>System.Decimal</DataType>
+          <DefaultVal></DefaultVal>
+        </ColumnInfo>
+
+        <ColumnInfo>
+          <ColumnName>Quantity</ColumnName>
+          <DataType>System.Int32</DataType>
+          <DefaultVal></DefaultVal>
+        </ColumnInfo>
+
+        <ColumnInfo>
+          <ColumnName>RecSerial</ColumnName>
+          <DataType>System.Int64</DataType>
+          <DefaultVal></DefaultVal>
+        </ColumnInfo>
+
+      </ColumnsList>
+    </MsgTypeSchema>
+
+  </SchemaList>
+</SchemaInfo>
