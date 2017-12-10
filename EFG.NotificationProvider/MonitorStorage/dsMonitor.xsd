@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsMonitor" targetNamespace="http://tempuri.org/dsMonitor.xsd" xmlns:mstns="http://tempuri.org/dsMonitor.xsd" xmlns="http://tempuri.org/dsMonitor.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsMonitor" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsMonitor" msprop:Generator_UserDSName="dsMonitor">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReceivedNotificaions" msprop:Generator_TableClassName="ReceivedNotificaionsDataTable" msprop:Generator_TableVarName="tableReceivedNotificaions" msprop:Generator_RowChangedName="ReceivedNotificaionsRowChanged" msprop:Generator_TablePropName="ReceivedNotificaions" msprop:Generator_RowDeletingName="ReceivedNotificaionsRowDeleting" msprop:Generator_RowChangingName="ReceivedNotificaionsRowChanging" msprop:Generator_RowEvHandlerName="ReceivedNotificaionsRowChangeEventHandler" msprop:Generator_RowDeletedName="ReceivedNotificaionsRowDeleted" msprop:Generator_RowClassName="ReceivedNotificaionsRow" msprop:Generator_UserTableName="ReceivedNotificaions" msprop:Generator_RowEvArgName="ReceivedNotificaionsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NotificationKey" msprop:Generator_ColumnVarNameInTable="columnNotificationKey" msprop:Generator_ColumnPropNameInRow="NotificationKey" msprop:Generator_ColumnPropNameInTable="NotificationKeyColumn" msprop:Generator_UserColumnName="NotificationKey" type="xs:string" minOccurs="0" />
+              <xs:element name="NotificaionDetails" msprop:Generator_ColumnVarNameInTable="columnNotificaionDetails" msprop:Generator_ColumnPropNameInRow="NotificaionDetails" msprop:Generator_ColumnPropNameInTable="NotificaionDetailsColumn" msprop:Generator_UserColumnName="NotificaionDetails" type="xs:string" minOccurs="0" />
+              <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Subscription_Items" msprop:Generator_TableClassName="Subscription_ItemsDataTable" msprop:Generator_TableVarName="tableSubscription_Items" msprop:Generator_RowChangedName="Subscription_ItemsRowChanged" msprop:Generator_TablePropName="Subscription_Items" msprop:Generator_RowDeletingName="Subscription_ItemsRowDeleting" msprop:Generator_RowChangingName="Subscription_ItemsRowChanging" msprop:Generator_RowEvHandlerName="Subscription_ItemsRowChangeEventHandler" msprop:Generator_RowDeletedName="Subscription_ItemsRowDeleted" msprop:Generator_RowClassName="Subscription_ItemsRow" msprop:Generator_UserTableName="Subscription_Items" msprop:Generator_RowEvArgName="Subscription_ItemsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NotificationKey" msprop:Generator_ColumnVarNameInTable="columnNotificationKey" msprop:Generator_ColumnPropNameInRow="NotificationKey" msprop:Generator_ColumnPropNameInTable="NotificationKeyColumn" msprop:Generator_UserColumnName="NotificationKey" type="xs:string" />
+              <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SentNotificaions" msprop:Generator_TableClassName="SentNotificaionsDataTable" msprop:Generator_TableVarName="tableSentNotificaions" msprop:Generator_RowChangedName="SentNotificaionsRowChanged" msprop:Generator_TablePropName="SentNotificaions" msprop:Generator_RowDeletingName="SentNotificaionsRowDeleting" msprop:Generator_RowChangingName="SentNotificaionsRowChanging" msprop:Generator_RowEvHandlerName="SentNotificaionsRowChangeEventHandler" msprop:Generator_RowDeletedName="SentNotificaionsRowDeleted" msprop:Generator_RowClassName="SentNotificaionsRow" msprop:Generator_UserTableName="SentNotificaions" msprop:Generator_RowEvArgName="SentNotificaionsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SubscriptionKey" msdata:Caption="NotificationKey" msprop:Generator_ColumnVarNameInTable="columnSubscriptionKey" msprop:Generator_ColumnPropNameInRow="SubscriptionKey" msprop:Generator_ColumnPropNameInTable="SubscriptionKeyColumn" msprop:Generator_UserColumnName="SubscriptionKey" type="xs:string" minOccurs="0" />
+              <xs:element name="MessageDetails" msdata:Caption="NotificaionDetails" msprop:Generator_ColumnVarNameInTable="columnMessageDetails" msprop:Generator_ColumnPropNameInRow="MessageDetails" msprop:Generator_ColumnPropNameInTable="MessageDetailsColumn" msprop:Generator_UserColumnName="MessageDetails" type="xs:string" minOccurs="0" />
+              <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Subscription_ItemsKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Subscription_Items" />
+      <xs:field xpath="mstns:NotificationKey" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

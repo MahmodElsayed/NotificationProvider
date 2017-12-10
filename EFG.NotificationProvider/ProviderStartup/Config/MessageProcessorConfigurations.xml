@@ -1,0 +1,74 @@
+﻿<?xml version="1.0"?>
+<MessageProcessorConfigurations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <MessageAttributesList>
+    <MessageAttributes>
+      <MessageTypeName>Notify_User#1248</MessageTypeName>
+            
+      <MessageTagsList>
+        <MessageTag>
+          <SourceFeild>EventIFANotificationID</SourceFeild>
+          <ColumnName>EventIFANotificationID</ColumnName>
+          
+        </MessageTag>
+        <MessageTag>
+          <SourceFeild>EventMessageID</SourceFeild>
+          <ColumnName>EventMessageID</ColumnName>
+          
+        </MessageTag>
+        <MessageTag>
+          <SourceFeild>EventIFANotificationBody</SourceFeild>
+          <ColumnName>EventIFANotificationBody</ColumnName>
+          
+        </MessageTag>
+        <MessageTag>
+          <SourceFeild>EventIFANotificationTitle</SourceFeild>
+          <ColumnName>EventIFANotificationTitle</ColumnName>
+          
+        </MessageTag>
+        <MessageTag>
+          <SourceFeild>EventIFASubscriberID</SourceFeild>
+          <ColumnName>EventIFASubscriberID</ColumnName>
+          
+        </MessageTag>
+        <MessageTag>
+          <SourceFeild>EventIFASubscriberNotificationAddress</SourceFeild>
+          <ColumnName>EventIFASubscriberNotificationAddress</ColumnName>
+          
+         
+        </MessageTag>
+        <MessageTag>
+          <SourceFeild>_EventMessagesStatusID</SourceFeild>
+          <ColumnName>_EventMessagesStatusID</ColumnName>
+          
+          
+        </MessageTag>
+        
+       
+        <MessageTag>
+          <SourceFeild>ParentEventMessageID</SourceFeild>
+          <ColumnName>ParentEventMessageID</ColumnName>
+          
+          <AggregationColumn></AggregationColumn>
+        </MessageTag>
+        <MessageTag>
+          <SourceFeild>ExpiryDate</SourceFeild>
+          <ColumnName>ExpiryDate</ColumnName>
+          
+        </MessageTag>
+      
+        <MessageTag>
+          <SourceFeild>EventMessageStatus</SourceFeild>
+          <ColumnName>EventMessageStatus</ColumnName>
+          
+        </MessageTag>
+        <MessageTag>
+          <SourceFeild>FirstParentEventmessageID</SourceFeild>
+          <ColumnName>FirstParentEventmessageID</ColumnName>
+          
+        </MessageTag>
+       
+      </MessageTagsList>
+    </MessageAttributes>
+
+  </MessageAttributesList>
+</MessageProcessorConfigurations>
