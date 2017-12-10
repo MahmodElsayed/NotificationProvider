@@ -14,6 +14,7 @@ using NLog;
 using Contract;
 using System.ServiceModel;
 using System.Timers;
+using MessagesLogger;
 
 namespace EFG.Notification.DataAdapter
 {
@@ -38,12 +39,16 @@ namespace EFG.Notification.DataAdapter
         BlockingCollection<FeedMessage> m_ReceivedFeedBCollecion = null; // will store received feed from Notification provider
         private ConcurrentQueue<string> m_subscirptionQueue = null; // receive subscription from lightstreamer server.
 
-        private static Logger m_NLog = LogManager.GetCurrentClassLogger();
+
+    
+
+        private static Logger m_NLog = LogManager.GetLogger("AppLogger");
 
         private System.Timers.Timer PingTimer = null;
         private int m_PingTimerIntervals = 3000;
         private bool IsConnectedToProvider = false;
-
+        private bool EnableLogger = false;
+        LogsHandler m_logHandler = null;
 
         #endregion
 
@@ -69,7 +74,9 @@ namespace EFG.Notification.DataAdapter
                 m_ReceivedFeedBCollecion = new BlockingCollection<FeedMessage>();
                 // establish connecion with wcf FeedProvider Service
                 //wcf create channel with  Provider.
-                m_FeedcallbackHandler = new IFeedCallbackHandler(m_ReceivedFeedBCollecion);
+                EnableLogger = bool.Parse(System.Configuration.ConfigurationManager.AppSettings["EnableLogger"]);
+                 m_logHandler = new LogsHandler();
+                m_FeedcallbackHandler = new IFeedCallbackHandler(m_ReceivedFeedBCollecion,EnableLogger,m_logHandler);
                 m_InstanceContext = new InstanceContext(m_FeedcallbackHandler);
                 m_factory = new DuplexChannelFactory<IDataFeed>(m_InstanceContext, "netTcpBinding_Ifeed");
                 m_IDataFeedService = m_factory.CreateChannel();
@@ -79,8 +86,12 @@ namespace EFG.Notification.DataAdapter
                 ((ICommunicationObject)m_IDataFeedService).Opened += DataAadapter_Opened;
 
                 m_PingTimerIntervals = Int32.Parse(System.Configuration.ConfigurationManager.AppSettings["PingTiemrIntervals"]);
+              
 
-               
+                if(EnableLogger)
+                {
+                    m_logHandler.StartLogging();
+                }
 
                 m_subscirptionQueue = new ConcurrentQueue<string>();
 
@@ -176,6 +187,11 @@ namespace EFG.Notification.DataAdapter
                     {
                         m_IDataFeedService.Subscribe(subscriptionCode, m_providerUserName);
 
+                        if(EnableLogger)
+                        {
+                            m_logHandler.SubscriptionInfo.Add(string.Format("Subscription to Item : {0} sent to Provider : {1}", subscriptionCode, m_providerUserName));
+                        }
+
                     }
                     else
                     {
@@ -198,7 +214,7 @@ namespace EFG.Notification.DataAdapter
 
         private void DataAadapter_Faulted(object sender, EventArgs e)
         {
-            m_NLog.Error("Session to FeedProvider Faulted!");
+            m_NLog.Warn("Session to FeedProvider Faulted!");
             // reconnect
             //1-Login
             //2- Resubscribe to all items.
@@ -218,7 +234,7 @@ namespace EFG.Notification.DataAdapter
             {
                 try
                 {
-                    SendToLsServer(feedMsg);
+                      SendToLsServer(feedMsg);
                 }
                 catch (Exception ex)
                 {
@@ -233,6 +249,11 @@ namespace EFG.Notification.DataAdapter
                 string itemName = string.Empty;
                 itemName = feedMsg.SubscriptionCode;
                 m_listener.Update(itemName, feedMsg.MessageFields, true);
+
+                if(EnableLogger)
+                {
+                    m_logHandler.SentFeedMessages.Add(feedMsg);
+                }
             }
             catch (Exception exp)
             {
@@ -303,28 +324,54 @@ namespace EFG.Notification.DataAdapter
 
                 if (m_itmesSubsciptions.ContainsKey(subscriptionCode) == false)
                 {
-                    m_itmesSubsciptions.Add(subscriptionCode, subscriptionCode.Substring(0, 2));
+                    m_itmesSubsciptions.Add(subscriptionCode, subscriptionCode);
 
                     //send subsciption to the queue.
                     m_subscirptionQueue.Enqueue(subscriptionCode);
+
+                    if(EnableLogger)
+                    {
+                        m_logHandler.SubscriptionInfo.Add(String.Format("Subscription of Item : {0} Received from LightStreamer Server",subscriptionCode));
+                    }
                 }
             }
             catch (Exception exp)
             {
-                Console.WriteLine(exp.ToString());
+                m_NLog.Error("Erro in IDataProvider.Subscribe. Error Details : {0} ", exp.ToString());
             }
         }
 
         void IDataProvider.Unsubscribe(string subscriptionCode)
         {
-            if (m_itmesSubsciptions.ContainsKey(subscriptionCode))
-            {
-                m_itmesSubsciptions.Remove(subscriptionCode);
-            }
 
-            // unsubscibe from the feed provider.
-            m_IDataFeedService.UnSubscribe(subscriptionCode, m_providerUserName);
-            m_NLog.Info("Item : {0} Unsubscibed from FeedService!");
+            try
+            {
+                if (m_itmesSubsciptions.ContainsKey(subscriptionCode))
+                {
+                    m_itmesSubsciptions.Remove(subscriptionCode);
+
+
+                }
+                if (EnableLogger)
+                {
+                    m_logHandler.SubscriptionInfo.Add(String.Format("UnSubscribe request of Item : {0} Received from LightStreamer Server", subscriptionCode));
+                }
+
+
+
+                // unsubscibe from the feed provider.
+                m_IDataFeedService.UnSubscribe(subscriptionCode, m_providerUserName);
+                if (EnableLogger)
+                {
+                    m_logHandler.SubscriptionInfo.Add(String.Format("UnSubscribe request of Item : {0} sent to Provider : {1}", subscriptionCode, m_providerUserName));
+                }
+
+                m_NLog.Info("Item : {0} Unsubscibed from FeedService!");
+            }
+            catch (Exception exp)
+            {
+                m_NLog.Error("Erro in method IDataProvider.Unsubscribe. Error Details : {0} ", exp.ToString());
+            }
 
         }
         /// <summary>
@@ -356,11 +403,14 @@ namespace EFG.Notification.DataAdapter
     {
 
         BlockingCollection<FeedMessage> m_receivedFeedBCollecion;
-       
+        bool EnableLogger = false;
+        LogsHandler m_logsHandler;
 
-        public IFeedCallbackHandler(BlockingCollection<FeedMessage> receivedFeedBCollecion)
+        public IFeedCallbackHandler(BlockingCollection<FeedMessage> receivedFeedBCollecion,bool enableLogger,LogsHandler logsHanlder)
         {
             m_receivedFeedBCollecion = receivedFeedBCollecion;
+            EnableLogger = enableLogger;
+            m_logsHandler = logsHanlder;
            
         }
 
@@ -368,10 +418,21 @@ namespace EFG.Notification.DataAdapter
         {
             foreach (FeedMessage feedMsg in dataFeedMsgList)
             {
-                Console.WriteLine("FeedMessage Received at {0}", DateTime.Now.ToLongTimeString());
-                    m_receivedFeedBCollecion.Add(feedMsg);
-                 
-                
+                 m_receivedFeedBCollecion.Add(feedMsg);
+
+                if (EnableLogger)
+                {
+                    try
+                    {
+                        m_logsHandler.ReceivedFeedMessages.Add(feedMsg);
+                    }
+                    catch (Exception exp)
+                    {
+                        continue;
+                    }
+                }
+
+
             }
         }
     }

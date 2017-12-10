@@ -12,7 +12,7 @@ namespace EFG.Notification.DataAdapter
 {
     public class DataAdaptersLauncher
     {
-        private static Logger m_NLog = LogManager.GetCurrentClassLogger();
+        private static Logger m_NLog = LogManager.GetLogger("AppLogger");
 
         public static void Main(string[] args)
         {
@@ -42,6 +42,7 @@ namespace EFG.Notification.DataAdapter
                 server.NotifyStream = notifSocket.GetStream();
 
                 server.Start();
+                
                 m_NLog.Info("Remote DataAdapter connected succssfully to LS on IP {0} and Port {1}", host, reqrepPort);
                 
                 Console.ReadLine();

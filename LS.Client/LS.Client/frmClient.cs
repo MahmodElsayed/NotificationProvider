@@ -313,7 +313,7 @@ namespace LS.Client
                       items,
                        subsciptionmdoe,
                        schecmName,
-                       false
+                       true
                        );
 
                 tableInfo.DataAdapter = txtboxFeedAdatperName.Text;

@@ -92,7 +92,7 @@ namespace LightStreamerConnector
                       Item,
                        Mode,
                        schema,
-                       false
+                       true
                        );
 
                 tableInfo.DataAdapter = FeedAdapter;

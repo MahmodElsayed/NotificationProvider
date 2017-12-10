@@ -79,11 +79,15 @@
   <ItemGroup>
     <Content Include="ExternalDlls\dlls\Contract.dll" />
     <Content Include="ExternalDlls\dlls\DotNetAdapter.dll" />
-    <Content Include="ExternalDlls\dlls\EDATA_BROKER.XmlSerializers.dll" />
     <Content Include="ExternalDlls\dlls\NetComm.dll" />
     <Content Include="ExternalDlls\dlls\NLog.dll" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="MessagesLogger\MessagesLogger.csproj">
+      <Project>{ce31106d-6574-4492-baa5-f1fb716e424c}</Project>
+      <Name>MessagesLogger</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
