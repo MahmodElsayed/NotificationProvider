@@ -86,12 +86,14 @@ namespace LightStreamerConnector
         /// <param name="SchemaCode"></param>
         public void Subscibe(string Item, string Mode)
         {
-           
+            List<string> items = new List<string>();
+            items.Add(Item);
+
                 string schema = GetSchema(Item);
-               SimpleTableInfo tableInfo = new SimpleTableInfo(
-                      Item,
+            ExtendedTableInfo tableInfo = new ExtendedTableInfo(
+                      items.ToArray(),
                        Mode,
-                       schema,
+                       schema.Split(new char[] {' ' }),
                        true
                        );
 

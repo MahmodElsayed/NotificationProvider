@@ -34,14 +34,40 @@ namespace LS.Client
 
         public void OnUpdate(int itemPos, string itemName, IUpdateInfo updateInfo)
         {
+            FeedMessage feedMsg = new FeedMessage();
+            int indexOfSchemaSpliter = itemName.IndexOf('#');
+            string schemacode = itemName.Remove(indexOfSchemaSpliter);
 
+           IEnumerable<dsSchema.SchemaInfoRow> rows =  m_dsSchema.SchemaInfo.Where(r => r.SchemaCode == schemacode);
+
+            Dictionary<string, string> data = new Dictionary<string, string>();
+
+            foreach (dsSchema.SchemaInfoRow dr in rows)
+            {
+                string fieldName = dr.FieldName;
+                string value = updateInfo.GetNewValue(dr.FieldName.Trim());
+                data.Add(fieldName, value);
+            }
+            feedMsg.ItemName = itemName;
+            feedMsg.DataItems = data;
+            m_ReceivedFeedBCollecion.Add(feedMsg);
+        }
+        /// <summary>
+        /// SimpleTableInfo
+        /// </summary>
+        /// <param name="itemPos"></param>
+        /// <param name="itemName"></param>
+        /// <param name="updateInfo"></param>
+        public void _OnUpdate(int itemPos, string itemName, IUpdateInfo updateInfo)
+        {
+            
 
             itemName = updateInfo.GetNewValue(6);  // will be modified to remove hard coded value.
             FeedMessage feedMsg = new FeedMessage();
             int indexOfSchemaSpliter = itemName.IndexOf('#');
             string schemacode = itemName.Remove(indexOfSchemaSpliter);
 
-           IEnumerable<dsSchema.SchemaInfoRow> rows =  m_dsSchema.SchemaInfo.Where(r => r.SchemaCode == schemacode);
+            IEnumerable<dsSchema.SchemaInfoRow> rows = m_dsSchema.SchemaInfo.Where(r => r.SchemaCode == schemacode);
 
             Dictionary<string, string> data = new Dictionary<string, string>();
 

@@ -366,7 +366,7 @@ namespace EFG.Notification.DataAdapter
                     m_logHandler.SubscriptionInfo.Add(String.Format("UnSubscribe request of Item : {0} sent to Provider : {1}", subscriptionCode, m_providerUserName));
                 }
 
-                m_NLog.Info("Item : {0} Unsubscibed from FeedService!");
+                m_NLog.Info("Item : {0} Unsubscibed from FeedService!",subscriptionCode);
             }
             catch (Exception exp)
             {
