@@ -35,6 +35,7 @@
             this.comboBoxSubscriptionMode = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGrid1 = new System.Windows.Forms.DataGrid();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,9 +51,9 @@
             // 
             // btnSubscribe
             // 
-            this.btnSubscribe.Location = new System.Drawing.Point(308, 12);
+            this.btnSubscribe.Location = new System.Drawing.Point(304, 12);
             this.btnSubscribe.Name = "btnSubscribe";
-            this.btnSubscribe.Size = new System.Drawing.Size(219, 44);
+            this.btnSubscribe.Size = new System.Drawing.Size(194, 44);
             this.btnSubscribe.TabIndex = 2;
             this.btnSubscribe.Text = "Subscribe";
             this.btnSubscribe.UseVisualStyleBackColor = true;
@@ -107,16 +108,27 @@
             // 
             this.dataGrid1.DataMember = "";
             this.dataGrid1.HeaderForeColor = System.Drawing.SystemColors.ControlText;
-            this.dataGrid1.Location = new System.Drawing.Point(26, 86);
+            this.dataGrid1.Location = new System.Drawing.Point(26, 115);
             this.dataGrid1.Name = "dataGrid1";
-            this.dataGrid1.Size = new System.Drawing.Size(1233, 636);
+            this.dataGrid1.Size = new System.Drawing.Size(1233, 607);
             this.dataGrid1.TabIndex = 19;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1126, 65);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(124, 44);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "UnSubscribe";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // frmTestFeed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1292, 734);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGrid1);
             this.Controls.Add(this.comboBoxSubscriptionMode);
             this.Controls.Add(this.label2);
@@ -141,6 +153,7 @@
         private System.Windows.Forms.ComboBox comboBoxSubscriptionMode;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGrid dataGrid1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

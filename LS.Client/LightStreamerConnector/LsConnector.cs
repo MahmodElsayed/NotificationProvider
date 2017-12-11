@@ -19,6 +19,7 @@ namespace LightStreamerConnector
         private TableListenerForExtended m_TableListenerForExtended = null;
         private  BlockingCollection<FeedMessage> m_ReceivedFeedBCollecion = null;
         private dsSchema m_dsSchema = null;
+        SubscribedTableKey NotificaionTableRef = null;
         public string PushServer { get; set; }
         public int Port { get; set; }
         public string FeedAdapter { get; set; }
@@ -68,15 +69,19 @@ namespace LightStreamerConnector
 
                 connInfo.User = UserName;
                 connInfo.Password = Password;
-
-
-            
-
-                 
+ 
 
                 m_lsClient.OpenConnection(connInfo, new LsConnectionListener());
                 return true;
            
+        }
+
+        /// <summary>
+        /// Disconnect from lightStreamer Server
+        /// </summary>
+        public void Disconnect()
+        {
+            m_lsClient.CloseConnection();
         }
         /// <summary>
         /// Subscirbe in lightstreamer
@@ -99,17 +104,30 @@ namespace LightStreamerConnector
 
                 tableInfo.DataAdapter = FeedAdapter;
 
-                SubscribedTableKey tableRef = m_lsClient.SubscribeTable(
+                 NotificaionTableRef = m_lsClient.SubscribeTable(
                   tableInfo,
                   m_TableListenerForExtended,
                   false
                   );
 
+          
 
           
         }
 
+        public void Unsubscribe()
+        {
+            if (NotificaionTableRef != null)
+            {
+                m_lsClient.UnsubscribeTable(NotificaionTableRef);
+                NotificaionTableRef = null;
+            }
+
+           
+        }
       
+
+
         //public void Test()
         //{
         //    dsSchema ds = new dsSchema();
@@ -148,6 +166,7 @@ namespace LightStreamerConnector
                 }
               
             return sbuilder.ToString().TrimEnd();
+            
             
 
         }

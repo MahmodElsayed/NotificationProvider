@@ -132,5 +132,10 @@ namespace FeedTestClient
                 MessageBox.Show(exp.ToString());
             }
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            m_LsConnector.Unsubscribe();
+        }
     }
 }
