@@ -75,6 +75,8 @@ namespace FeedMessagesProcessror
                 FeedMessage feedMsg = new FeedMessage();
                 feedMsg.SubscriptionCode = notificationMsg.NotificationKey;
 
+                string messageType = GetMessageType(feedMsg.SubscriptionCode);
+
                 feedMsg.MessageAction = notificationMsg.MessageAction.ToString();
                  feedMsg.MessageFields = new Dictionary<string, string>();
               
@@ -83,9 +85,9 @@ namespace FeedMessagesProcessror
                  feedMsg.SequenceNumber = SequenceNumber;
 
 
-                string notificaionType = notificationMsg.NotificationKey;// will be replaced with Notificaion type.
+               // string notificaionType = notificationMsg.NotificationKey;// will be replaced with Notificaion type.
 
-                MessageAttributes msgAttributes = m_FeedProcessorConfigStorage.MessagesAttributesInfo[notificaionType];
+                MessageAttributes msgAttributes = m_FeedProcessorConfigStorage.MessagesAttributesInfo[messageType];
 
                foreach(MessageTag tag in  msgAttributes.MessageTagsList)
                 {
@@ -106,6 +108,21 @@ namespace FeedMessagesProcessror
             }
         }
 
+        private string GetMessageType(string subscriptionCode)
+        {
+            string messageType = string.Empty;
+            try
+            {
+                 int indexOfTypeSpliter = subscriptionCode.IndexOf('#');
+                 messageType = subscriptionCode.Remove(indexOfTypeSpliter);
+            }
+            catch(Exception exp)
+            {
+                m_NLog.Error("Error in method GetMessageType. Error Details: {0}. ", exp.ToString());
+            }
+            return messageType;
+        }
+
         #endregion
 
         #region public method
@@ -114,13 +131,11 @@ namespace FeedMessagesProcessror
         {
             try
             {
-                //Run Consumer
+               //Run Consumer
                 Task.Factory.StartNew(() =>
                 {
                     StartProcessNotificaions();
                 });
-
-
             }
             catch (Exception exp)
             {
