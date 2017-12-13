@@ -45,6 +45,14 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="dlls\EFG.OPS.NotificationEngineService.Contracts.dll" />
+    <Content Include="dlls\Infragistics4.Shared.v14.1.dll" />
+    <Content Include="dlls\Infragistics4.Shared.v14.1.xml" />
+    <Content Include="dlls\Infragistics4.Win.Misc.v14.1.dll" />
+    <Content Include="dlls\Infragistics4.Win.Misc.v14.1.xml" />
+    <Content Include="dlls\Infragistics4.Win.UltraWinGrid.v14.1.dll" />
+    <Content Include="dlls\Infragistics4.Win.UltraWinGrid.v14.1.xml" />
+    <Content Include="dlls\Infragistics4.Win.v14.1.dll" />
+    <Content Include="dlls\Infragistics4.Win.v14.1.xml" />
     <Content Include="dlls\NLog.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
