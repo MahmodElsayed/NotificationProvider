@@ -25,10 +25,10 @@ namespace SendNotification
                 var proxy = factory.CreateChannel();
 
                 Dictionary<string, string> bodyDictionary = new Dictionary<string, string>();
-                bodyDictionary.Add("EventIFANotificationID", "1");
+                bodyDictionary.Add("EventIFANotificationID", txtCode.Text);
                 bodyDictionary.Add("EventMessageID", "1");
                 bodyDictionary.Add("EventIFANotificationBody", "Test");
-                bodyDictionary.Add("EventIFANotificationTitle", "Update");
+                bodyDictionary.Add("EventIFANotificationTitle", "New TITLE" + DateTime.Now.TimeOfDay.ToString());
                 bodyDictionary.Add("EventIFASubscriberID", "1");
                 bodyDictionary.Add("EventIFASubscriberNotificationAddress", "Notify_User#1248");
                 bodyDictionary.Add("_EventMessagesStatusID", "1");
@@ -36,19 +36,40 @@ namespace SendNotification
                 bodyDictionary.Add("ExpiryDate", DateTime.Now.ToString());
                 bodyDictionary.Add("EventMessageStatus", "1");
                 bodyDictionary.Add("FirstParentEventmessageID", "1");
-                
-               
-               
+
+
+
 
                 ////////////////////
 
+                NotificationMessage notificaionMsg = new NotificationMessage();
+                notificaionMsg.BodyDictionary = bodyDictionary;
+                
+                switch(comboBox1.Text)
+                {
+                    case "Add":
+                        notificaionMsg.MessageAction = MessageAction.Insert;
+                        break;
+
+                    case "Update":
+                        notificaionMsg.MessageAction = MessageAction.Update;
+                        break;
+
+                    case "Delete":
+                        notificaionMsg.MessageAction = MessageAction.Delete;
+                        break;
 
 
+                }
+              
 
-                ////
-
-                proxy.PublishNotification(new NotificationMessage() { BodyDictionary = bodyDictionary, MessageAction = MessageAction.Insert },textBox1.Text.Trim());
+                proxy.PublishNotification(notificaionMsg,textBox1.Text.Trim());
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            comboBox1.SelectedIndex = 0;
         }
     }
 }

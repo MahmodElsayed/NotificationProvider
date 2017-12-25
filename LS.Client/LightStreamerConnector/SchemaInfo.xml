@@ -55,6 +55,16 @@
     <FieldName>FirstParentEventmessageID</FieldName>
     <FieldIndex>11</FieldIndex>
   </SchemaInfo>
+  <SchemaInfo>
+    <SchemaCode>Notify_User</SchemaCode>
+    <FieldName>command</FieldName>
+    <FieldIndex>12</FieldIndex>
+  </SchemaInfo>
+  <SchemaInfo>
+    <SchemaCode>Notify_User</SchemaCode>
+    <FieldName>key</FieldName>
+    <FieldIndex>13</FieldIndex>
+  </SchemaInfo>
 </dsSchema>
 
 

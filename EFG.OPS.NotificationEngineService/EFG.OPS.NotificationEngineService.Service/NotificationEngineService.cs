@@ -43,24 +43,24 @@ namespace EFG.OPS.NotificationEngineService.Service
 
         public void PublishNotifications(NotificationMessage[] notificationMessages)
         {
-            List<IPublishNotification> subscribers = bzSubscributionManager.GetSubscribers();
-            if (subscribers == null) return;
+            //List<IPublishNotification> subscribers = bzSubscributionManager.GetSubscribers();
+            //if (subscribers == null) return;
 
-            Type type = typeof(IPublishNotification);
-            MethodInfo publishMethodInfo = type.GetMethod("PublishNotifications");
+            //Type type = typeof(IPublishNotification);
+            //MethodInfo publishMethodInfo = type.GetMethod("PublishNotifications");
 
-            foreach (IPublishNotification subscriber in subscribers)
-            {
-                try
-                {
-                    publishMethodInfo.Invoke(subscriber, new object[] { notificationMessages });
-                }
-                catch
-                {
+            //foreach (IPublishNotification subscriber in subscribers)
+            //{
+            //    try
+            //    {
+            //        publishMethodInfo.Invoke(subscriber, new object[] { notificationMessages });
+            //    }
+            //    catch
+            //    {
 
-                }
+            //    }
 
-            }
+            //}
         }
 
         public bool Subscribe()

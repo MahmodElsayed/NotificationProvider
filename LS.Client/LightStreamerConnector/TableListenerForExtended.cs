@@ -34,6 +34,9 @@ namespace LS.Client
 
         public void OnUpdate(int itemPos, string itemName, IUpdateInfo updateInfo)
         {
+
+            string key = updateInfo.GetNewValue("key");
+            string action = updateInfo.GetNewValue("command");
             FeedMessage feedMsg = new FeedMessage();
             int indexOfSchemaSpliter = itemName.IndexOf('#');
             string schemacode = itemName.Remove(indexOfSchemaSpliter);
@@ -46,10 +49,15 @@ namespace LS.Client
             {
                 string fieldName = dr.FieldName;
                 string value = updateInfo.GetNewValue(dr.FieldName.Trim());
+
+                if (fieldName == "command" || fieldName == "key")
+                    continue;
                 data.Add(fieldName, value);
             }
             feedMsg.ItemName = itemName;
             feedMsg.DataItems = data;
+            feedMsg.Code = key.Trim();
+            feedMsg.Action = action.Trim();
             m_ReceivedFeedBCollecion.Add(feedMsg);
         }
         /// <summary>

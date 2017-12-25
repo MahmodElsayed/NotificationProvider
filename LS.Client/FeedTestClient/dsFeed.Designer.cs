@@ -301,6 +301,8 @@ namespace FeedTestClient {
             
             private global::System.Data.DataColumn columnFirstParentEventmessageID;
             
+            private global::System.Data.DataColumn columnCode;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public NotificaiontsDataTable() {
@@ -424,6 +426,14 @@ namespace FeedTestClient {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CodeColumn {
+                get {
+                    return this.columnCode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -459,7 +469,7 @@ namespace FeedTestClient {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public NotificaiontsRow AddNotificaiontsRow(string EventIFANotificationID, string EventMessageID, string EventIFANotificationBody, string EventIFANotificationTitle, string EventIFASubscriberID, string EventIFASubscriberNotificationAddress, string _EventMessagesStatusID, string ParentEventMessageID, string ExpiryDate, string EventMessageStatus, string FirstParentEventmessageID) {
+            public NotificaiontsRow AddNotificaiontsRow(string EventIFANotificationID, string EventMessageID, string EventIFANotificationBody, string EventIFANotificationTitle, string EventIFASubscriberID, string EventIFASubscriberNotificationAddress, string _EventMessagesStatusID, string ParentEventMessageID, string ExpiryDate, string EventMessageStatus, string FirstParentEventmessageID, string Code) {
                 NotificaiontsRow rowNotificaiontsRow = ((NotificaiontsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         EventIFANotificationID,
@@ -472,10 +482,18 @@ namespace FeedTestClient {
                         ParentEventMessageID,
                         ExpiryDate,
                         EventMessageStatus,
-                        FirstParentEventmessageID};
+                        FirstParentEventmessageID,
+                        Code};
                 rowNotificaiontsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowNotificaiontsRow);
                 return rowNotificaiontsRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public NotificaiontsRow FindByCode(string Code) {
+                return ((NotificaiontsRow)(this.Rows.Find(new object[] {
+                            Code})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -506,6 +524,7 @@ namespace FeedTestClient {
                 this.columnExpiryDate = base.Columns["ExpiryDate"];
                 this.columnEventMessageStatus = base.Columns["EventMessageStatus"];
                 this.columnFirstParentEventmessageID = base.Columns["FirstParentEventmessageID"];
+                this.columnCode = base.Columns["Code"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -533,6 +552,12 @@ namespace FeedTestClient {
                 base.Columns.Add(this.columnEventMessageStatus);
                 this.columnFirstParentEventmessageID = new global::System.Data.DataColumn("FirstParentEventmessageID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFirstParentEventmessageID);
+                this.columnCode = new global::System.Data.DataColumn("Code", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCode);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("NotificaiontsKey1", new global::System.Data.DataColumn[] {
+                                this.columnCode}, true));
+                this.columnCode.AllowDBNull = false;
+                this.columnCode.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -852,6 +877,17 @@ namespace FeedTestClient {
                 }
                 set {
                     this[this.tableNotificaionts.FirstParentEventmessageIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Code {
+                get {
+                    return ((string)(this[this.tableNotificaionts.CodeColumn]));
+                }
+                set {
+                    this[this.tableNotificaionts.CodeColumn] = value;
                 }
             }
             

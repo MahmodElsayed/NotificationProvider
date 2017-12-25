@@ -21,7 +21,7 @@ namespace FeedTestClient
         public frmTestFeed()
         {
             InitializeComponent();
-            dataGrid1.DataSource = m_dsFeed.Notificaionts;
+            dataGridNotificaions.DataSource = m_dsFeed.Notificaionts;
             
             comboBoxSubscriptionMode.SelectedIndex = 0;
            
@@ -43,7 +43,7 @@ namespace FeedTestClient
                 m_LsConnector.Password = "pasword";
 
                 // will be used to resolve schema info to send it to Metadata Provider
-                m_LsConnector.SchemaFilePath = @"E:\myProjects\EFG\LS.Client\LightStreamerConnector\SchemaInfo.xml";
+                m_LsConnector.SchemaFilePath = @"E:\NotificationProvider\LS.Client\LightStreamerConnector\SchemaInfo.xml";
 
 
                 m_LsConnector.Initialize();
@@ -95,7 +95,7 @@ namespace FeedTestClient
             }
         }
 
-        private void HandleFeedMessage(FeedMessage msg)
+        private void _HandleFeedMessage(FeedMessage msg)
         {
             try
             {
@@ -114,6 +114,85 @@ namespace FeedTestClient
             }
         }
 
+
+        private void HandleFeedMessage(FeedMessage msg)
+        {
+            try
+            {
+                switch(msg.Action)
+                {
+                    case "ADD":
+                        AddNewNotificaion(msg);
+                        break;
+
+                    case "UPDATE":
+                        UpdateNotificaion(msg);
+                        break;
+
+                    case "DELETE":
+                        DeleteNotificaion(msg);
+                        break;
+                }
+
+
+
+              
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.ToString());
+            }
+        }
+
+        private void DeleteNotificaion(FeedMessage msg)
+        {
+            dsFeed.NotificaiontsRow dr = m_dsFeed.Notificaionts.FindByCode(msg.Code);
+            if (dr != null)
+            {
+                m_dsFeed.Notificaionts.RemoveNotificaiontsRow(dr);
+
+                m_dsFeed.AcceptChanges();
+            }
+        //    dataGridNotificaions.Refresh();
+        }
+
+        private void UpdateNotificaion(FeedMessage msg)
+        {
+            dsFeed.NotificaiontsRow dr = m_dsFeed.Notificaionts.FindByCode(msg.Code);
+            if(dr!=null)
+            {
+                dr.BeginEdit();
+
+                foreach (string columnName in msg.DataItems.Keys)
+                {
+                    string value = msg.DataItems[columnName];
+                    dr[columnName] = value;
+                }
+
+
+                dr.EndEdit();
+
+                m_dsFeed.AcceptChanges();
+
+             //   dataGridNotificaions.Refresh();
+            }
+        }
+
+        private void AddNewNotificaion(FeedMessage msg)
+        {
+            dsFeed.NotificaiontsRow dr = m_dsFeed.Notificaionts.NewNotificaiontsRow();
+            foreach (string columnName in msg.DataItems.Keys)
+            {
+                string value = msg.DataItems[columnName];
+                dr[columnName] = value;
+            }
+            dr.Code = msg.Code;
+            m_dsFeed.Notificaionts.AddNotificaiontsRow(dr);
+            m_dsFeed.AcceptChanges();
+
+          //  dataGridNotificaions.Refresh();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -122,7 +201,7 @@ namespace FeedTestClient
                 m_LsConnector = new LsConnector();
 
                
-                m_LsConnector.SchemaFilePath = @"E:\myProjects\EFG\LS.Client\LightStreamerConnector\SchemaInfo.xml";
+                m_LsConnector.SchemaFilePath = @"E:\NotificationProvider\LS.Client\LightStreamerConnector\SchemaInfo.xml";
 
                 m_LsConnector.Initialize();
               

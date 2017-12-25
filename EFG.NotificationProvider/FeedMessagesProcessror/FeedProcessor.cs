@@ -23,6 +23,7 @@ namespace FeedMessagesProcessror
         private long SequenceNumber = 0; // will be used to set sequence numbres of feedMessages
         private FeedProcessorConfigStorage m_FeedProcessorConfigStorage = null;
         private static Logger m_NLog = LogManager.GetLogger("AppLogger");
+        private string m_NotificaionKeyField = "EventIFANotificationID";
         #endregion
 
         #region Construcot
@@ -30,7 +31,8 @@ namespace FeedMessagesProcessror
         {
             try
             {
-              
+
+                m_NotificaionKeyField = System.Configuration.ConfigurationManager.AppSettings["NotificaionKeyField"];
                 m_NotificationMessages = notificationMessages;
                 m_msgRouter = router;
 
@@ -97,6 +99,24 @@ namespace FeedMessagesProcessror
                         string value = notificationMsg.BodyDictionary[tag.SourceFeild];
                         feedMsg.MessageFields.Add(fieldName, value);
                     }
+                }
+
+                switch (notificationMsg.MessageAction)
+                {
+                    case EFG.OPS.NotificationEngineService.Contracts.Enums.MessageAction.Insert:
+                        feedMsg.MessageFields.Add("command", "ADD");
+                        feedMsg.MessageFields.Add("key", feedMsg.MessageFields[m_NotificaionKeyField]);
+                        break;
+
+                    case EFG.OPS.NotificationEngineService.Contracts.Enums.MessageAction.Update:
+                        feedMsg.MessageFields.Add("command", "UPDATE");
+                        feedMsg.MessageFields.Add("key", feedMsg.MessageFields[m_NotificaionKeyField]);
+                        break;
+
+                    case EFG.OPS.NotificationEngineService.Contracts.Enums.MessageAction.Delete:
+                        feedMsg.MessageFields.Add("command", "DELETE");
+                        feedMsg.MessageFields.Add("key", feedMsg.MessageFields[m_NotificaionKeyField]);
+                        break;
                 }
                            
                 m_msgRouter.Route(feedMsg);
