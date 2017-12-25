@@ -34,9 +34,9 @@
             this.txtboxSubscriptionItem = new System.Windows.Forms.TextBox();
             this.comboBoxSubscriptionMode = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGrid1 = new System.Windows.Forms.DataGrid();
+            this.dataGridNotificaions = new System.Windows.Forms.DataGrid();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridNotificaions)).BeginInit();
             this.SuspendLayout();
             // 
             // btnConnectToLs
@@ -104,14 +104,14 @@
             this.label2.TabIndex = 17;
             this.label2.Text = "Subscription Mode";
             // 
-            // dataGrid1
+            // dataGridNotificaions
             // 
-            this.dataGrid1.DataMember = "";
-            this.dataGrid1.HeaderForeColor = System.Drawing.SystemColors.ControlText;
-            this.dataGrid1.Location = new System.Drawing.Point(26, 115);
-            this.dataGrid1.Name = "dataGrid1";
-            this.dataGrid1.Size = new System.Drawing.Size(1233, 607);
-            this.dataGrid1.TabIndex = 19;
+            this.dataGridNotificaions.DataMember = "";
+            this.dataGridNotificaions.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this.dataGridNotificaions.Location = new System.Drawing.Point(26, 115);
+            this.dataGridNotificaions.Name = "dataGridNotificaions";
+            this.dataGridNotificaions.Size = new System.Drawing.Size(1233, 607);
+            this.dataGridNotificaions.TabIndex = 19;
             // 
             // button1
             // 
@@ -129,7 +129,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1292, 734);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGrid1);
+            this.Controls.Add(this.dataGridNotificaions);
             this.Controls.Add(this.comboBoxSubscriptionMode);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtboxSubscriptionItem);
@@ -138,7 +138,7 @@
             this.Controls.Add(this.btnConnectToLs);
             this.Name = "frmTestFeed";
             this.Text = "Test Feed";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridNotificaions)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,7 +152,7 @@
         private System.Windows.Forms.TextBox txtboxSubscriptionItem;
         private System.Windows.Forms.ComboBox comboBoxSubscriptionMode;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGrid dataGrid1;
+        private System.Windows.Forms.DataGrid dataGridNotificaions;
         private System.Windows.Forms.Button button1;
     }
 }

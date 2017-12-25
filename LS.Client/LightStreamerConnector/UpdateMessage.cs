@@ -15,7 +15,7 @@ namespace LS.Client
 
         public string Code { get; set; }
 
-        public string MessagePrefix { get; set; }
+        public string Action { get; set; }
 
         public Dictionary<string,string> DataItems { get; set; }
     }

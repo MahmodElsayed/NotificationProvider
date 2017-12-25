@@ -12,7 +12,7 @@
   <xs:element name="dsFeed" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsFeed" msprop:Generator_UserDSName="dsFeed">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Notificaionts" msprop:Generator_TableClassName="NotificaiontsDataTable" msprop:Generator_TableVarName="tableNotificaionts" msprop:Generator_TablePropName="Notificaionts" msprop:Generator_RowDeletingName="NotificaiontsRowDeleting" msprop:Generator_RowChangingName="NotificaiontsRowChanging" msprop:Generator_RowEvHandlerName="NotificaiontsRowChangeEventHandler" msprop:Generator_RowDeletedName="NotificaiontsRowDeleted" msprop:Generator_UserTableName="Notificaionts" msprop:Generator_RowChangedName="NotificaiontsRowChanged" msprop:Generator_RowEvArgName="NotificaiontsRowChangeEvent" msprop:Generator_RowClassName="NotificaiontsRow">
+        <xs:element name="Notificaionts" msprop:Generator_TableClassName="NotificaiontsDataTable" msprop:Generator_TableVarName="tableNotificaionts" msprop:Generator_RowChangedName="NotificaiontsRowChanged" msprop:Generator_TablePropName="Notificaionts" msprop:Generator_RowDeletingName="NotificaiontsRowDeleting" msprop:Generator_RowChangingName="NotificaiontsRowChanging" msprop:Generator_RowEvHandlerName="NotificaiontsRowChangeEventHandler" msprop:Generator_RowDeletedName="NotificaiontsRowDeleted" msprop:Generator_RowClassName="NotificaiontsRow" msprop:Generator_UserTableName="Notificaionts" msprop:Generator_RowEvArgName="NotificaiontsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="EventIFANotificationID" msprop:Generator_ColumnVarNameInTable="columnEventIFANotificationID" msprop:Generator_ColumnPropNameInRow="EventIFANotificationID" msprop:Generator_ColumnPropNameInTable="EventIFANotificationIDColumn" msprop:Generator_UserColumnName="EventIFANotificationID" type="xs:string" minOccurs="0" />
@@ -26,10 +26,15 @@
               <xs:element name="ExpiryDate" msprop:Generator_ColumnVarNameInTable="columnExpiryDate" msprop:Generator_ColumnPropNameInRow="ExpiryDate" msprop:Generator_ColumnPropNameInTable="ExpiryDateColumn" msprop:Generator_UserColumnName="ExpiryDate" type="xs:string" minOccurs="0" />
               <xs:element name="EventMessageStatus" msprop:Generator_ColumnVarNameInTable="columnEventMessageStatus" msprop:Generator_ColumnPropNameInRow="EventMessageStatus" msprop:Generator_ColumnPropNameInTable="EventMessageStatusColumn" msprop:Generator_UserColumnName="EventMessageStatus" type="xs:string" minOccurs="0" />
               <xs:element name="FirstParentEventmessageID" msprop:Generator_ColumnVarNameInTable="columnFirstParentEventmessageID" msprop:Generator_ColumnPropNameInRow="FirstParentEventmessageID" msprop:Generator_ColumnPropNameInTable="FirstParentEventmessageIDColumn" msprop:Generator_UserColumnName="FirstParentEventmessageID" type="xs:string" minOccurs="0" />
+              <xs:element name="Code" msprop:Generator_ColumnVarNameInTable="columnCode" msprop:Generator_ColumnPropNameInRow="Code" msprop:Generator_ColumnPropNameInTable="CodeColumn" msprop:Generator_UserColumnName="Code" type="xs:string" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
       </xs:choice>
     </xs:complexType>
+    <xs:unique name="NotificaiontsKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Notificaionts" />
+      <xs:field xpath="mstns:Code" />
+    </xs:unique>
   </xs:element>
 </xs:schema>
